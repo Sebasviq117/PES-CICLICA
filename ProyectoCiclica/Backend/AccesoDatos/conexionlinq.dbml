@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CiclicaApp_DB" Class="conexionlinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=appciclicadb.database.windows.net;Initial Catalog=CiclicaApp_DB;User ID=admin01" SettingsObjectName="Backend.Properties.Settings" SettingsPropertyName="CiclicaApp_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.sp_IngresarUsuario" Method="sp_IngresarUsuario">
+    <Parameter Name="USER_NOMBRE" Parameter="uSER_NOMBRE" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="USER_PRIMER_APELLIDO" Parameter="uSER_PRIMER_APELLIDO" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="USER_SEGUNDO_APELLIDO" Parameter="uSER_SEGUNDO_APELLIDO" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="USER_CORREO" Parameter="uSER_CORREO" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="USER_CONTRASENA" Parameter="uSER_CONTRASENA" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
