@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F1A2F7E-68DD-44CB-86C9-F1843B296430}</ProjectGuid>
+    <ProjectGuid>{9155F39A-9739-44CC-B797-40ADF1CC2A9A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Backend</RootNamespace>
@@ -55,7 +55,13 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Entidades\Enum\EnumErrores.cs" />
     <Compile Include="Entidades\Request\ReqBase.cs" />
+    <Compile Include="Entidades\Request\ReqIngresarUsuario.cs" />
+    <Compile Include="Entidades\Request\ReqObtenerUsuario.cs" />
     <Compile Include="Entidades\Response\ResBase.cs" />
+    <Compile Include="Entidades\Response\ResIngresarUsuario.cs" />
+    <Compile Include="Entidades\Response\ResObtenerUsuario.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Logica\LogUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -63,9 +69,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logica\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="AccesoDatos\conexionlinq.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

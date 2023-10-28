@@ -8,6 +8,8 @@ namespace Backend.Entidades
 {
     public class ResBase
     {
-        public Boolean result {  get; set; }
+        public Boolean resultado {  get; set; }
+
+        public String errorMensaje { get; set; }
     }
 }

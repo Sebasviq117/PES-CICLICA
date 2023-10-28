@@ -1,0 +1,7 @@
+C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\obj\Debug\Backend.csproj.AssemblyReference.cache
+C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\obj\Debug\Backend.csproj.CoreCompileInputs.cache
+C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\bin\Debug\Backend.dll.config
+C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\bin\Debug\Backend.dll
+C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\bin\Debug\Backend.pdb
+C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\obj\Debug\Backend.dll
+C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\obj\Debug\Backend.pdb

@@ -9,9 +9,11 @@ namespace Backend
 {
     public class Class1
     {
-        public void BibliotecaErrores() {
+        public void bibliotecaerrores() {
             int error = 0;
-            error = (int)EnumErrores.correoFaltante;
+            error = (int) EnumErrores.loginIncorrecto;
+
+
         }
     }
 }

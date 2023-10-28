@@ -8,5 +8,6 @@ namespace Backend.Entidades
 {
     public class ReqBase
     {
+        public String session { get; set; }
     }
 }
