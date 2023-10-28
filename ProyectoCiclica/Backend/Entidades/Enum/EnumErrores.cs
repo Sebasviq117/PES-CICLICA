@@ -11,5 +11,6 @@ namespace Backend.Entidades
         correoFaltante = 1,
         loginIncorrecto = 2,
         contraseñaFaltante = 3,
+       
     }
 }
