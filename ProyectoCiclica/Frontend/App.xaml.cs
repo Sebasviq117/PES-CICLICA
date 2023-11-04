@@ -8,7 +8,7 @@ namespace Frontend
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new VistaPrincipal());            
+            MainPage = new NavigationPage(new VistaPrincipal());
         }
     }
 }
