@@ -8,8 +8,15 @@ namespace Backend.Entidades
 {
     public enum EnumErrores
     {
-        correoFaltante = 1,
-        loginIncorrecto = 2,
-        contrasenaFaltante = 3,
+        //Catalogo de errorres
+        ErrorInterno = -1,
+        NombreFaltante = 001,
+        PrimerApellidoFaltante = 002,
+        SegundoApellidoFaltante = 003,
+        CorreoFaltante = 004,
+        ContrasenaFaltante = 005,
+        ErrorLogin = 006,
+        ErrorSession = 007,
+        SessionFaltante = 008,
     }
 }

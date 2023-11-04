@@ -15,5 +15,13 @@ namespace WebApi.Controllers
             return miLogica.IngresarUsuario(req);
         }
 
+        [HttpPost]
+        [Route("api/usuario/loginUsuario")]
+        public ResLoginUsuario LoginUsuario(ReqLoginUsuario req)
+        {
+            LogUsuario miLogica = new LogUsuario();
+            return miLogica.LoginUsuario(req);
+        }
+
     }
 }

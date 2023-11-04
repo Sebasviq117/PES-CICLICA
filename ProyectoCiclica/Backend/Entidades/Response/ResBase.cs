@@ -11,5 +11,7 @@ namespace Backend.Entidades
         public Boolean resultado {  get; set; }
 
         public String errorMensaje { get; set; }
+
+        public int errorCode { get; set; }
     }
 }
