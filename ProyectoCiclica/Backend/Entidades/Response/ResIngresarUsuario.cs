@@ -8,6 +8,6 @@ namespace Backend.Entidades
 {
     public class ResIngresarUsuario : ResBase
     {
-        
+        //PRUEBA 
     }
 }
