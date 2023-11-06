@@ -71,6 +71,162 @@ namespace Backend.AccesoDatos
 			errorDescripcion = ((string)(result.GetParameterValue(7)));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_LoginUsuario")]
+		public int SP_LoginUsuario([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Correo", DbType="VarChar(200)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contrasena", DbType="VarChar(50)")] string contrasena, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), correo, contrasena, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(3)));
+			errorDescripcion = ((string)(result.GetParameterValue(4)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_LoginUsuario")]
+		public int SP_LoginUsuario1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Correo", DbType="VarChar(200)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contrasena", DbType="VarChar(50)")] string contrasena, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), correo, contrasena, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(3)));
+			errorDescripcion = ((string)(result.GetParameterValue(4)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ObtenerSession")]
+		public ISingleResult<sp_ObtenerSessionResult> sp_ObtenerSession([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string session, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), session, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			errorDescripcion = ((string)(result.GetParameterValue(3)));
+			return ((ISingleResult<sp_ObtenerSessionResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_IngresarSession")]
+		public int sp_IngresarSession([global::System.Data.Linq.Mapping.ParameterAttribute(Name="SESSION_USER_ID", DbType="Int")] System.Nullable<int> sESSION_USER_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SESSION", DbType="VarChar(MAX)")] string sESSION, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sESSION_USER_ID, sESSION, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(3)));
+			errorDescripcion = ((string)(result.GetParameterValue(4)));
+			return ((int)(result.ReturnValue));
+		}
+	}
+	
+	public partial class sp_ObtenerSessionResult
+	{
+		
+		private int _SESSION_ID;
+		
+		private int _SESSION_USER_ID;
+		
+		private string _SESSION;
+		
+		private System.Nullable<System.DateTime> _SESSION_FECHA_INICIO;
+		
+		private System.Nullable<System.DateTime> _SESSION_FECHA_FINAL;
+		
+		private System.Nullable<bool> _SESSION_ESTADO;
+		
+		public sp_ObtenerSessionResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SESSION_ID", DbType="Int NOT NULL")]
+		public int SESSION_ID
+		{
+			get
+			{
+				return this._SESSION_ID;
+			}
+			set
+			{
+				if ((this._SESSION_ID != value))
+				{
+					this._SESSION_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SESSION_USER_ID", DbType="Int NOT NULL")]
+		public int SESSION_USER_ID
+		{
+			get
+			{
+				return this._SESSION_USER_ID;
+			}
+			set
+			{
+				if ((this._SESSION_USER_ID != value))
+				{
+					this._SESSION_USER_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SESSION", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string SESSION
+		{
+			get
+			{
+				return this._SESSION;
+			}
+			set
+			{
+				if ((this._SESSION != value))
+				{
+					this._SESSION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SESSION_FECHA_INICIO", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SESSION_FECHA_INICIO
+		{
+			get
+			{
+				return this._SESSION_FECHA_INICIO;
+			}
+			set
+			{
+				if ((this._SESSION_FECHA_INICIO != value))
+				{
+					this._SESSION_FECHA_INICIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SESSION_FECHA_FINAL", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SESSION_FECHA_FINAL
+		{
+			get
+			{
+				return this._SESSION_FECHA_FINAL;
+			}
+			set
+			{
+				if ((this._SESSION_FECHA_FINAL != value))
+				{
+					this._SESSION_FECHA_FINAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SESSION_ESTADO", DbType="Bit")]
+		public System.Nullable<bool> SESSION_ESTADO
+		{
+			get
+			{
+				return this._SESSION_ESTADO;
+			}
+			set
+			{
+				if ((this._SESSION_ESTADO != value))
+				{
+					this._SESSION_ESTADO = value;
+				}
+			}
+		}
 	}
 }
 #pragma warning restore 1591
