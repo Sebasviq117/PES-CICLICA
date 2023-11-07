@@ -23,6 +23,11 @@ namespace Backend.Logica
             {
                 //Agregar resto de campos 
                 objetoSession.SessionId = sessionLinq.SESSION_ID;
+                objetoSession.Session_User_Id = sessionLinq.SESSION_USER_ID;
+                objetoSession.SessionCod = sessionLinq.SESSION;
+                objetoSession.Session_Fecha_Inicio = (DateTime)sessionLinq.SESSION_FECHA_INICIO;
+                objetoSession.Session_Fecha_Final = (DateTime)sessionLinq.SESSION_FECHA_FINAL;
+                objetoSession.Session_Estado = (bool)sessionLinq.SESSION_ESTADO;
             }
             else
             {
