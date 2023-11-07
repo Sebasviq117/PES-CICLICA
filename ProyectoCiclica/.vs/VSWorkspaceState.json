@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
+    "",
     "\\Backend",
     "\\Backend\\AccesoDatos",
     "\\Backend\\Entidades",
-    "\\Backend\\Entidades\\Enum",
-    "\\Backend\\Entidades\\Request",
-    "\\Backend\\Entidades\\Response",
     "\\Backend\\Logica",
     "\\WebApi",
     "\\WebApi\\Controllers"
   ],
+  "SelectedNode": "\\Backend\\Logica\\LogSession.cs",
   "PreviewInSolutionExplorer": false
 }

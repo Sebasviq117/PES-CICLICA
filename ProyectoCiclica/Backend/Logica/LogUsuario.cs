@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Backend.Logica
 {
@@ -54,12 +55,21 @@ namespace Backend.Logica
                     int? errorId = 0;
                     int? idReturn = 0;//idusuario
                     string errorDescripcion = "";
+                    int iDUsuario = req.elUsuario.idUsuario;
 
                     conexionlinqDataContext miLinq = new conexionlinqDataContext();
                     miLinq.sp_IngresarUsuario(req.elUsuario.nombre, req.elUsuario.primerApellido, req.elUsuario.segundoApellido, req.elUsuario.correo, req.elUsuario.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
-                    if (errorId == 0 && idReturn != 0)
+                    // realize una variable de tipo Int para capturar el IdUsuario una vez creado el usuario
+                    
+                    LogSession logSession = new LogSession();
+                    //instancie logSession para poder utilizar el metodo ingresarSession, y como parametro me solicita un IdUsuario, se habia declarado una variable
+
+                    bool sessionCreada = logSession.ingresarSession(iDUsuario);
+                    //si la session fue creada, tons debe ser diferente a false por que ingresar session es bool
+
+                    if (errorId == 0 && idReturn != 0 && sessionCreada != false)
                     {
-                        //Exitoso
+                        //Exitos
                         res.resultado = true;
                     }
                     else
@@ -110,6 +120,7 @@ namespace Backend.Logica
 
                     conexionlinqDataContext miLinq = new conexionlinqDataContext();
                     miLinq.SP_LoginUsuario(req.userLog.correo, req.userLog.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
+                    sp_ObtenerSessionResult miSession = new sp_ObtenerSessionResult();
                     //Validar correo , contrasena y  **si la session se creo
                     if (errorId == 0 && idReturn != 0)
                     {

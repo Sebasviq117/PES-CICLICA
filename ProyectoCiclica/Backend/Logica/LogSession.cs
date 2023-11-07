@@ -10,7 +10,7 @@ namespace Backend.Logica
 {
     public class LogSession
     {
-
+        // Se pone String session por que recibe el parametro de la BD session(el token)
         public Session obtenerSession(String session) {
             Session objetoSession = new Session();
             int? errorId = 0;
@@ -23,6 +23,11 @@ namespace Backend.Logica
             {
                 //Agregar resto de campos 
                 objetoSession.SessionId = sessionLinq.SESSION_ID;
+                objetoSession.Session_User_Id = sessionLinq.SESSION_USER_ID;
+                objetoSession.SessionCod = sessionLinq.SESSION;
+                objetoSession.Session_Fecha_Inicio = (DateTime)sessionLinq.SESSION_FECHA_INICIO;
+                objetoSession.Session_Fecha_Final = (DateTime)sessionLinq.SESSION_FECHA_FINAL;
+                objetoSession.Session_Estado = (bool)sessionLinq.SESSION_ESTADO;
             }
             else
             {
@@ -30,7 +35,7 @@ namespace Backend.Logica
             }
             return objetoSession;
         }
-
+        // En el SP solo recibe el IdUsuario por eso sale int idUsiario
         public Boolean ingresarSession(int idUsuario)
         {
             int? errorId = 0;
