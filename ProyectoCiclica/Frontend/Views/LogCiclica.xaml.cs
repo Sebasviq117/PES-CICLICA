@@ -1,5 +1,7 @@
-using Frontend.Entidades.Response;
+using Frontend.Entidades;
 using Frontend.Servicios;
+using Newtonsoft.Json;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
@@ -8,7 +10,9 @@ namespace Frontend.Views;
 public partial class LogCiclica : ContentPage
 {
     readonly IngresarUsuarioService _IngresarUsuarioService = new LoginService();
-	public LogCiclica()
+    string api = "https://webapiciclica.azurewebsites.net/api/";
+
+    public LogCiclica()
 	{
 		InitializeComponent();
         NavigationPage.SetHasNavigationBar(this, false);
@@ -16,31 +20,42 @@ public partial class LogCiclica : ContentPage
     private void BtnRegistrar_Clicked(object sender, EventArgs e)
     {
       Navigation.PushAsync(new RegCiclica());
-        
-        //1.crear entidad
-        //2.Crear la conexion con el api.json
-        //3.Cerializar la entidad a json (Newtonsoft)
-        //4.Ejecutar el json con el api
-        //5.Recibir respuesta    
     }
-
     private async void Btn_Ingresar_Clicked(object sender, EventArgs e)
     {
-        string UserCorreo = LoginCorreo.Text;
-        string UserContraseña = LoginContraseña.Text;
-        if(UserCorreo == null || UserContraseña == null)
+        
+        if(string.IsNullOrEmpty(LoginCorreo.Text) || string.IsNullOrEmpty(LoginContraseña.Text))
         {
             await DisplayAlert("Advertencia","Ingresa el Correo y contraseña", "Ok");
             return;
-        }
-        ResLoginUsuario loginApi = await _IngresarUsuarioService.Login(UserCorreo, UserContraseña);
-        if (loginApi != null)
+        }else
         {
-            await Navigation.PushAsync(new VistaPrincipal());
+            ReqLoginUsuario reqLoginUsuario = new ReqLoginUsuario();
+            reqLoginUsuario.userLog = new Login();
+            reqLoginUsuario.userLog.correo = LoginCorreo.Text;
+            reqLoginUsuario.userLog.contrasena = LoginContraseña.Text;
+            var jsonContent = new StringContent(JsonConvert.SerializeObject(reqLoginUsuario), Encoding.UTF8, "application/json");
+            HttpClient httpClient = new HttpClient();
+            var response = await httpClient.PostAsync(api + "usuario/loginUsuario", jsonContent);
+
+            if(response.IsSuccessStatusCode) {
+                ResLoginUsuario resLoginUsuario = new ResLoginUsuario();
+                var responseContent = await response.Content.ReadAsStringAsync();
+                resLoginUsuario = JsonConvert.DeserializeObject<ResLoginUsuario>(responseContent);
+                if (resLoginUsuario.resultado)
+                {
+                    await Navigation.PushAsync(new VistaPrincipal());
+                }
+                else
+                {
+                    await DisplayAlert("Advertencia", "Correo y contraseña incorrectos", "Ok");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Advertencia", "Error de conexion", "Ok");
+            }
         }
-        else
-        {
-            await DisplayAlert("Advertencia", "Correo y contraseña incorrectos", "Ok");
-        }
+        
     }
 }

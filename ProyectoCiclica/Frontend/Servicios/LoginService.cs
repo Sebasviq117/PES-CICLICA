@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Frontend.Entidades.Response;
+using Frontend.Entidades;
 
 namespace Frontend.Servicios
 {

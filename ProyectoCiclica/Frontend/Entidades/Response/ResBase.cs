@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Frontend.Entidades.Response
+namespace Frontend.Entidades
 {
     public class ResBase
     {

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
-namespace Frontend.Entidades.Response
+namespace Frontend.Entidades
 {
-    public class ResLoginUsuario
+    public class ResLoginUsuario : ResBase
     {
-
+        public string session { get; set; }
     }
 }
