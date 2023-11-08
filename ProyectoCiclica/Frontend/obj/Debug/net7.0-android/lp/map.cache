@@ -7,6 +7,7 @@ Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
 Syncfusion.Maui.Calendar.dll
 Syncfusion.Maui.Core.dll
+Syncfusion.Maui.Scheduler.dll
 Xamarin.Android.Glide.Annotations.dll
 Xamarin.Android.Glide.DiskLruCache.dll
 Xamarin.Android.Glide.dll
@@ -159,5 +160,6 @@ Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 Syncfusion.Maui.Calendar.aar
 Syncfusion.Maui.Core.aar
+Syncfusion.Maui.Scheduler.aar
 Xamarin.Google.Crypto.Tink.Android.aar
 XCalendar.Maui.aar

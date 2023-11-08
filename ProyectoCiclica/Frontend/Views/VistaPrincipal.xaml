@@ -23,9 +23,6 @@
                        WidthRequest="343"
                        StrokeShape="RoundRectangle 35"
                        Margin="25,0,0,0">
-                    <xc:CalendarView
-                        x:Name="calendar"
-                        />
                     <Border.Shadow>
                         <Shadow
                             Brush="darkred"

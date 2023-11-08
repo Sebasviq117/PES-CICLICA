@@ -22,15 +22,29 @@
             <Label Text="Bienvenida a tu cuenta" FontSize="28" TextColor="#b01d2e" HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>
         <StackLayout>
-            <Entry Placeholder="Correo" PlaceholderColor="#E58C8C" VerticalOptions="Center" Keyboard="Email">
+            <Entry x:Name="LoginCorreo"
+                Placeholder="Correo" 
+                   PlaceholderColor="#E58C8C" 
+                   VerticalOptions="Center" 
+                   Keyboard="Email">
             </Entry>
         </StackLayout>
         <StackLayout>
-            <Entry Placeholder="Contraseña" PlaceholderColor="#E58C8C" VerticalOptions="Center" IsPassword="True">
+            <Entry x:Name="LoginContraseña"
+                Placeholder="Contraseña" 
+                PlaceholderColor="#E58C8C" 
+                VerticalOptions="Center" 
+                IsPassword="True">
             </Entry>
         </StackLayout>
         
-        <Button Text="Ingresar" VerticalOptions="Center" CornerRadius="20" BackgroundColor="#b01d2e"/>
+        <Button 
+            x:Name="Btn_Ingresar"
+            Clicked="Btn_Ingresar_Clicked"   
+            Text="Ingresar" 
+            VerticalOptions="Center" 
+            CornerRadius="20" 
+            BackgroundColor="#b01d2e"/>
 
         <StackLayout Orientation="Vertical" Margin="0,150,0,0">
             <Label Text="¿Aún no tienes cuenta?" TextColor="#E58C8C" HorizontalOptions="Center" 
