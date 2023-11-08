@@ -5,6 +5,7 @@ C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\bin\Debug\Ba
 C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\bin\Debug\Backend.pdb
 C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\obj\Debug\Backend.dll
 C:\Users\Esteban\OneDrive\Documentos\AplicacionMovilCiclica\Backend\obj\Debug\Backend.pdb
+<<<<<<< HEAD
 C:\Users\Brandon Robles Varga\OneDrive\Escritorio\PES\CíclicaAppMóvil\PES-CICLICA\ProyectoCiclica\Backend\bin\Debug\Backend.dll.config
 C:\Users\Brandon Robles Varga\OneDrive\Escritorio\PES\CíclicaAppMóvil\PES-CICLICA\ProyectoCiclica\Backend\bin\Debug\Backend.dll
 C:\Users\Brandon Robles Varga\OneDrive\Escritorio\PES\CíclicaAppMóvil\PES-CICLICA\ProyectoCiclica\Backend\bin\Debug\Backend.pdb
@@ -12,3 +13,12 @@ C:\Users\Brandon Robles Varga\OneDrive\Escritorio\PES\CíclicaAppMóvil\PES-CICL
 C:\Users\Brandon Robles Varga\OneDrive\Escritorio\PES\CíclicaAppMóvil\PES-CICLICA\ProyectoCiclica\Backend\obj\Debug\Backend.csproj.CoreCompileInputs.cache
 C:\Users\Brandon Robles Varga\OneDrive\Escritorio\PES\CíclicaAppMóvil\PES-CICLICA\ProyectoCiclica\Backend\obj\Debug\Backend.dll
 C:\Users\Brandon Robles Varga\OneDrive\Escritorio\PES\CíclicaAppMóvil\PES-CICLICA\ProyectoCiclica\Backend\obj\Debug\Backend.pdb
+=======
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Backend\bin\Debug\Backend.dll.config
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Backend\bin\Debug\Backend.dll
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Backend\bin\Debug\Backend.pdb
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Backend\obj\Debug\Backend.csproj.AssemblyReference.cache
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Backend\obj\Debug\Backend.csproj.CoreCompileInputs.cache
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Backend\obj\Debug\Backend.dll
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Backend\obj\Debug\Backend.pdb
+>>>>>>> aa8701b9eb3bcd06ede002670c015467f2e83c36
