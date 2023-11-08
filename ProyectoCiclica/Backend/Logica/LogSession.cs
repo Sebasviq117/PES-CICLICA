@@ -11,7 +11,7 @@ namespace Backend.Logica
     public class LogSession
     {
         // Se pone String session por que recibe el parametro de la BD session(el token)
-        public Session obtenerSession(String session) {
+        public static Session obtenerSession(String session) {
             Session objetoSession = new Session();
             int? errorId = 0;
             int? idReturn = 0;//idusuario
@@ -36,22 +36,23 @@ namespace Backend.Logica
             return objetoSession;
         }
         // En el SP solo recibe el IdUsuario por eso sale int idUsiario
-        public Boolean ingresarSession(int idUsuario)
+        public static string ingresarSession(int idUsuario)
         {
             int? errorId = 0;
             int? idReturn = 0;//idusuario
             string errorDescripcion = "";
 
             conexionlinqDataContext miLinq = new conexionlinqDataContext();
-            miLinq.sp_IngresarSession(idUsuario, Guid.NewGuid().ToString() ,ref idReturn, ref errorId, ref errorDescripcion);
+            string session = Guid.NewGuid().ToString();
+            miLinq.sp_IngresarSession(idUsuario, session,ref idReturn, ref errorId, ref errorDescripcion);
             if (errorId == 0 && idReturn != 0)
             {
                 //Agregar resto de campos 
-                return true;
+                return session ;
             }
             else
             {
-                return false;
+                return null;
             }
         }
     }

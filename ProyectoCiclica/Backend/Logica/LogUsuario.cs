@@ -55,19 +55,12 @@ namespace Backend.Logica
                     int? errorId = 0;
                     int? idReturn = 0;//idusuario
                     string errorDescripcion = "";
-                    int iDUsuario = req.elUsuario.idUsuario;
 
                     conexionlinqDataContext miLinq = new conexionlinqDataContext();
                     miLinq.sp_IngresarUsuario(req.elUsuario.nombre, req.elUsuario.primerApellido, req.elUsuario.segundoApellido, req.elUsuario.correo, req.elUsuario.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
                     // realize una variable de tipo Int para capturar el IdUsuario una vez creado el usuario
-                    
-                    LogSession logSession = new LogSession();
-                    //instancie logSession para poder utilizar el metodo ingresarSession, y como parametro me solicita un IdUsuario, se habia declarado una variable
 
-                    bool sessionCreada = logSession.ingresarSession(iDUsuario);
-                    //si la session fue creada, tons debe ser diferente a false por que ingresar session es bool
-
-                    if (errorId == 0 && idReturn != 0 && sessionCreada != false)
+                    if (errorId == 0 && idReturn != 0 )
                     {
                         //Exitos
                         res.resultado = true;
@@ -120,16 +113,20 @@ namespace Backend.Logica
 
                     conexionlinqDataContext miLinq = new conexionlinqDataContext();
                     miLinq.SP_LoginUsuario(req.userLog.correo, req.userLog.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
-                    sp_ObtenerSessionResult miSession = new sp_ObtenerSessionResult();
+
+                    string session = LogSession.ingresarSession((int)idReturn);
+                    
                     //Validar correo , contrasena y  **si la session se creo
-                    if (errorId == 0 && idReturn != 0)
+                    if (errorId == 0 && idReturn != 0 && session != null)
                     {
                         //Exitoso
                         res.resultado = true;
+                        res.session = session;
                     }
                     else
                     {
                         //Error en la base de datos
+                        res.session = null;
                         res.resultado = false;
                         res.errorMensaje = "Error de login";
                         res.errorCode = (int)EnumErrores.ErrorLogin;
@@ -139,6 +136,7 @@ namespace Backend.Logica
             }
             catch (Exception ex)
             {
+                res.session = null;  
                 res.resultado = false;
                 res.errorMensaje = "Error interno";
                 res.errorCode = (int)EnumErrores.ErrorInterno;
