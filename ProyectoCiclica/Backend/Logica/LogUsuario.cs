@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Backend.Logica
 {
@@ -57,9 +58,11 @@ namespace Backend.Logica
 
                     conexionlinqDataContext miLinq = new conexionlinqDataContext();
                     miLinq.sp_IngresarUsuario(req.elUsuario.nombre, req.elUsuario.primerApellido, req.elUsuario.segundoApellido, req.elUsuario.correo, req.elUsuario.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
-                    if (errorId == 0 && idReturn != 0)
+                    // realize una variable de tipo Int para capturar el IdUsuario una vez creado el usuario
+
+                    if (errorId == 0 && idReturn != 0 )
                     {
-                        //Exitoso
+                        //Exitos
                         res.resultado = true;
                     }
                     else
@@ -110,15 +113,20 @@ namespace Backend.Logica
 
                     conexionlinqDataContext miLinq = new conexionlinqDataContext();
                     miLinq.SP_LoginUsuario(req.userLog.correo, req.userLog.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
+
+                    string session = LogSession.ingresarSession((int)idReturn);
+                    
                     //Validar correo , contrasena y  **si la session se creo
-                    if (errorId == 0 && idReturn != 0)
+                    if (errorId == 0 && idReturn != 0 && session != null)
                     {
                         //Exitoso
                         res.resultado = true;
+                        res.session = session;
                     }
                     else
                     {
                         //Error en la base de datos
+                        res.session = null;
                         res.resultado = false;
                         res.errorMensaje = "Error de login";
                         res.errorCode = (int)EnumErrores.ErrorLogin;
@@ -128,6 +136,7 @@ namespace Backend.Logica
             }
             catch (Exception ex)
             {
+                res.session = null;  
                 res.resultado = false;
                 res.errorMensaje = "Error interno";
                 res.errorCode = (int)EnumErrores.ErrorInterno;

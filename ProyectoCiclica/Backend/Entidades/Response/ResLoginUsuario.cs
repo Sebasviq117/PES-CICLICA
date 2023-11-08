@@ -8,5 +8,6 @@ namespace Backend.Entidades
 {
     public class ResLoginUsuario : ResBase
     {
+        public string session { get; set; }
     }
 }
