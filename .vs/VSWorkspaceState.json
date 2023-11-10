@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProyectoCiclica",
+    "\\ProyectoCiclica\\Backend",
+    "\\ProyectoCiclica\\Backend\\Logica"
   ],
-  "SelectedNode": "\\Frontend.sln",
+  "SelectedNode": "\\ProyectoCiclica\\Backend\\Logica\\LogSession.cs",
   "PreviewInSolutionExplorer": false
 }

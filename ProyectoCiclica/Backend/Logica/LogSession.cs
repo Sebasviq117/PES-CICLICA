@@ -55,5 +55,11 @@ namespace Backend.Logica
                 return null;
             }
         }
+
+        public static void EvaluarSession()
+        {
+           
+        }
+
     }
 }
