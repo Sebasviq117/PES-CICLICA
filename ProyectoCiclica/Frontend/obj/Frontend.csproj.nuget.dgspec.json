@@ -101,6 +101,14 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "SimpleToolkit.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "SimpleToolkit.SimpleShell": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[23.1.43, )"
@@ -246,6 +254,14 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "SimpleToolkit.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "SimpleToolkit.SimpleShell": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[23.1.43, )"
@@ -335,6 +351,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "SimpleToolkit.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "SimpleToolkit.SimpleShell": {
+              "target": "Package",
+              "version": "[3.0.1, )"
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
@@ -436,6 +460,14 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "SimpleToolkit.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "SimpleToolkit.SimpleShell": {
+              "target": "Package",
+              "version": "[3.0.1, )"
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",

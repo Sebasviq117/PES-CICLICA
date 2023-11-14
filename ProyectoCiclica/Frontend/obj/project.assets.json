@@ -308,6 +308,32 @@
           }
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -2481,6 +2507,32 @@
           }
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -4645,6 +4697,32 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
           }
         }
       },
@@ -6815,6 +6893,32 @@
           }
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -8979,6 +9083,32 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
           }
         }
       },
@@ -11149,6 +11279,32 @@
           }
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -13316,6 +13472,32 @@
           }
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -15480,6 +15662,32 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll": {
+            "related": ".aar;.xml"
           }
         }
       },
@@ -17655,6 +17863,24 @@
           }
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -18184,6 +18410,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -18725,6 +18969,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -19262,6 +19524,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -19803,6 +20083,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -20340,6 +20638,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -20881,6 +21197,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -21404,6 +21738,24 @@
           "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -21886,6 +22238,24 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -22417,6 +22787,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -22958,6 +23346,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -23495,6 +23901,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -24036,6 +24460,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -24573,6 +25015,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -25114,6 +25574,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -25635,6 +26113,24 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -26262,6 +26758,24 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -26908,6 +27422,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -27564,6 +28096,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -28216,6 +28766,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -28872,6 +29440,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -29524,6 +30110,24 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -30180,6 +30784,24 @@
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        }
+      },
       "Syncfusion.Licensing/23.1.43": {
         "type": "package",
         "compile": {
@@ -30822,6 +31444,24 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "SimpleToolkit.Core/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll": {}
+        }
+      },
+      "SimpleToolkit.SimpleShell/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll": {}
         }
       },
       "Syncfusion.Licensing/23.1.43": {
@@ -32591,6 +33231,48 @@
         "runtimes/aot/lib/netcore50/System.Private.Uri.dll",
         "runtimes/win/lib/netcore50/System.Private.Uri.dll",
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
+      ]
+    },
+    "SimpleToolkit.Core/3.0.0": {
+      "sha512": "FGkQgbqGYOgk5CdLQ7+c02q21uPHefgWPom74MDZhiHq7/kKtnmYUwZkjIHYlc98wTLdxFSoSLy1skQku/1aCw==",
+      "type": "package",
+      "path": "simpletoolkit.core/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "SimpleToolkit.Core.md",
+        "lib/net7.0-android33.0/SimpleToolkit.Core.aar",
+        "lib/net7.0-android33.0/SimpleToolkit.Core.dll",
+        "lib/net7.0-android33.0/SimpleToolkit.Core.xml",
+        "lib/net7.0-ios16.1/SimpleToolkit.Core.dll",
+        "lib/net7.0-maccatalyst16.1/SimpleToolkit.Core.dll",
+        "lib/net7.0-windows10.0.19041/SimpleToolkit.Core.dll",
+        "lib/net7.0/SimpleToolkit.Core.dll",
+        "logo_with_background.png",
+        "simpletoolkit.core.3.0.0.nupkg.sha512",
+        "simpletoolkit.core.nuspec"
+      ]
+    },
+    "SimpleToolkit.SimpleShell/3.0.1": {
+      "sha512": "KZ+dd9sLVQ5xqqtpU7xtz1QZ37p01fDqYFNrdQoJUfEXqioQpAMgAz1TnjDCCoxn/BiUxLxxijD+7Ex6s3MVFw==",
+      "type": "package",
+      "path": "simpletoolkit.simpleshell/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "SimpleToolkit.SimpleShell.md",
+        "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.aar",
+        "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.dll",
+        "lib/net7.0-android33.0/SimpleToolkit.SimpleShell.xml",
+        "lib/net7.0-ios16.1/SimpleToolkit.SimpleShell.dll",
+        "lib/net7.0-maccatalyst16.1/SimpleToolkit.SimpleShell.dll",
+        "lib/net7.0-windows10.0.19041/SimpleToolkit.SimpleShell.dll",
+        "lib/net7.0/SimpleToolkit.SimpleShell.dll",
+        "logo_with_background.png",
+        "simpletoolkit.simpleshell.3.0.1.nupkg.sha512",
+        "simpletoolkit.simpleshell.nuspec"
       ]
     },
     "Syncfusion.Licensing/23.1.43": {
@@ -35053,6 +35735,8 @@
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.96",
       "Newtonsoft.Json >= 13.0.3",
+      "SimpleToolkit.Core >= 3.0.0",
+      "SimpleToolkit.SimpleShell >= 3.0.1",
       "Syncfusion.Maui.Calendar >= 23.1.43",
       "Syncfusion.Maui.Scheduler >= 23.1.43",
       "System.Globalization.Calendars >= 4.3.0",
@@ -35079,6 +35763,8 @@
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.96",
       "Newtonsoft.Json >= 13.0.3",
+      "SimpleToolkit.Core >= 3.0.0",
+      "SimpleToolkit.SimpleShell >= 3.0.1",
       "Syncfusion.Maui.Calendar >= 23.1.43",
       "Syncfusion.Maui.Scheduler >= 23.1.43",
       "System.Globalization.Calendars >= 4.3.0",
@@ -35094,6 +35780,8 @@
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.96",
       "Newtonsoft.Json >= 13.0.3",
+      "SimpleToolkit.Core >= 3.0.0",
+      "SimpleToolkit.SimpleShell >= 3.0.1",
       "Syncfusion.Maui.Calendar >= 23.1.43",
       "Syncfusion.Maui.Scheduler >= 23.1.43",
       "System.Globalization.Calendars >= 4.3.0",
@@ -35111,6 +35799,8 @@
       "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop >= 7.0.96",
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
       "Newtonsoft.Json >= 13.0.3",
+      "SimpleToolkit.Core >= 3.0.0",
+      "SimpleToolkit.SimpleShell >= 3.0.1",
       "Syncfusion.Maui.Calendar >= 23.1.43",
       "Syncfusion.Maui.Scheduler >= 23.1.43",
       "System.Globalization.Calendars >= 4.3.0",
@@ -35217,6 +35907,14 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "SimpleToolkit.Core": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
+          "SimpleToolkit.SimpleShell": {
+            "target": "Package",
+            "version": "[3.0.1, )"
           },
           "Syncfusion.Maui.Calendar": {
             "target": "Package",
@@ -35363,6 +36061,14 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "SimpleToolkit.Core": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
+          "SimpleToolkit.SimpleShell": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
           "Syncfusion.Maui.Calendar": {
             "target": "Package",
             "version": "[23.1.43, )"
@@ -35452,6 +36158,14 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "SimpleToolkit.Core": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
+          "SimpleToolkit.SimpleShell": {
+            "target": "Package",
+            "version": "[3.0.1, )"
           },
           "Syncfusion.Maui.Calendar": {
             "target": "Package",
@@ -35553,6 +36267,14 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "SimpleToolkit.Core": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
+          "SimpleToolkit.SimpleShell": {
+            "target": "Package",
+            "version": "[3.0.1, )"
           },
           "Syncfusion.Maui.Calendar": {
             "target": "Package",

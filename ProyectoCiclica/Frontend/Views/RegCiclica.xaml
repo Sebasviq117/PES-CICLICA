@@ -31,35 +31,68 @@
             <Label Text="Registro" FontSize="35" TextColor="#b01d2e" HorizontalTextAlignment="Center" FontAttributes="Bold"  Margin="0,5,0,0"/>
         </VerticalStackLayout>
         <StackLayout>
-            <Entry Placeholder="Nombre" PlaceholderColor="#E58C8C" VerticalOptions="Center" Keyboard="Email" Margin="0,5,0,0"/>
+            <Entry x:Name="nombre"
+                Placeholder="Nombre" 
+                PlaceholderColor="#E58C8C"
+                VerticalOptions="Center" 
+                Keyboard="Email" 
+                Margin="0,5,0,0"/>
 
         </StackLayout>
         <StackLayout>
-            <Entry Placeholder="Primer apellido" PlaceholderColor="#E58C8C" VerticalOptions="Center" Margin="0,5,0,0"/>
-
-        </StackLayout>
-
-        <StackLayout>
-            <Entry Placeholder="Segundo apellido" PlaceholderColor="#E58C8C" VerticalOptions="Center" Margin="0,5,0,0"/>
-
-        </StackLayout>
-
-        <StackLayout>
-            <Entry Placeholder="Correo electronico" PlaceholderColor="#E58C8C" VerticalOptions="Center" Margin="0,5,0,0"/>
-
-        </StackLayout>
-
-        <StackLayout>
-            <Entry Placeholder="Contraseña" PlaceholderColor="#E58C8C" VerticalOptions="Center" IsPassword="True" Margin="0,5,0,0"/>
+            <Entry x:Name="priApellido"
+                Placeholder="Primer apellido" 
+                PlaceholderColor="#E58C8C" 
+                VerticalOptions="Center" 
+                Margin="0,5,0,0"/>
 
         </StackLayout>
 
         <StackLayout>
-            <Entry Placeholder="Confirmar contraseña" PlaceholderColor="#E58C8C" VerticalOptions="Center" IsPassword="True" Margin="0,5,0,0"/>
+            <Entry x:Name="segApellido"
+                Placeholder="Segundo apellido" 
+                PlaceholderColor="#E58C8C" 
+                VerticalOptions="Center"
+                Margin="0,5,0,0"/>
+
+        </StackLayout>
+
+        <StackLayout>
+            <Entry x:Name="correo"
+                Placeholder="Correo electronico" 
+                PlaceholderColor="#E58C8C" 
+                VerticalOptions="Center" 
+                Margin="0,5,0,0"/>
+
+        </StackLayout>
+
+        <StackLayout>
+            <Entry x:Name="Contra"
+                Placeholder="Contraseña"
+                PlaceholderColor="#E58C8C" 
+                VerticalOptions="Center" 
+                IsPassword="True"
+                Margin="0,5,0,0"/>
+
+        </StackLayout>
+
+        <StackLayout>
+            <Entry x:Name="confirmarContra"
+                Placeholder="Confirmar contraseña" 
+                PlaceholderColor="#E58C8C"
+                VerticalOptions="Center" 
+                IsPassword="True" 
+                Margin="0,5,0,0"/>
 
         </StackLayout>
         <StackLayout Orientation="Vertical" Margin="0,20,0,0">
-            <Button Text="Registrar" VerticalOptions="Center" CornerRadius="20" BackgroundColor="#b01d2e" Margin="0,2,0,0"/>
+            <Button x:Name="BtnRegistrar"
+                    Clicked="BtnRegistrar_Clicked"
+                    Text="Registrar"
+                    VerticalOptions="Center" 
+                    CornerRadius="20" 
+                    BackgroundColor="#b01d2e" 
+                    Margin="0,2,0,0"/>
             <Label Text="¿Ya tienes cuenta?" TextColor="#E58C8C" HorizontalTextAlignment="Center" Margin="0,50,0,0"/>
             <Button Text="Iniciar sesion" 
                     TextColor="#b01d2e" 

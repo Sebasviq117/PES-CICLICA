@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "f9uNB4yBQ45U+x/XUbjPT4f6/nk/UlyZoUwOQD7XySQbIrVp/X1+2v9537C2dCnQiX6dFRgSO89tZvMCzG47LA==",
+  "dgSpecHash": "uDVsfjSll00b3HzTxVjMJo0f8Wyp12jPxAsZ3Unzoo9trJ8SWcgQv1hZ4h5OjDUEXmv6BnPnEhdVM+2V7PAjpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sebas\\OneDrive\\Escritorio\\PES CICLICA\\ProyectoCiclica\\Frontend\\Frontend.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,8 @@
     "C:\\Users\\sebas\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\runtime.unix.system.private.uri\\4.3.0\\runtime.unix.system.private.uri.4.3.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\simpletoolkit.core\\3.0.0\\simpletoolkit.core.3.0.0.nupkg.sha512",
+    "C:\\Users\\sebas\\.nuget\\packages\\simpletoolkit.simpleshell\\3.0.1\\simpletoolkit.simpleshell.3.0.1.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\syncfusion.licensing\\23.1.43\\syncfusion.licensing.23.1.43.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\syncfusion.maui.calendar\\23.1.43\\syncfusion.maui.calendar.23.1.43.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\syncfusion.maui.core\\23.1.43\\syncfusion.maui.core.23.1.43.nupkg.sha512",
