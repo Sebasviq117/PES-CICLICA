@@ -5,6 +5,8 @@ Microsoft.Maui.Controls.Xaml.dll
 Microsoft.Maui.dll
 Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
+SimpleToolkit.Core.dll
+SimpleToolkit.SimpleShell.dll
 Syncfusion.Maui.Calendar.dll
 Syncfusion.Maui.Core.dll
 Syncfusion.Maui.Scheduler.dll
@@ -158,6 +160,8 @@ Microsoft.Maui.Controls.Compatibility.aar
 maui.aar
 Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
+SimpleToolkit.Core.aar
+SimpleToolkit.SimpleShell.aar
 Syncfusion.Maui.Calendar.aar
 Syncfusion.Maui.Core.aar
 Syncfusion.Maui.Scheduler.aar

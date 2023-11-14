@@ -1,5 +1,4 @@
 using Frontend.Entidades;
-using Frontend.Servicios;
 using Newtonsoft.Json;
 using System.Text;
 using System.Text.Json;
@@ -9,7 +8,6 @@ namespace Frontend.Views;
 
 public partial class LogCiclica : ContentPage
 {
-    readonly IngresarUsuarioService _IngresarUsuarioService = new LoginService();
     string api = "https://webapiciclica.azurewebsites.net/api/";
 
     public LogCiclica()

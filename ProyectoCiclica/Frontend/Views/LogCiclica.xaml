@@ -32,8 +32,8 @@
         <StackLayout>
             <Entry x:Name="LoginContraseña"
                 Placeholder="Contraseña" 
-                PlaceholderColor="#E58C8C" 
-                VerticalOptions="Center" 
+                PlaceholderColor="#E58C8C"
+                VerticalOptions="Center"
                 IsPassword="True">
             </Entry>
         </StackLayout>
