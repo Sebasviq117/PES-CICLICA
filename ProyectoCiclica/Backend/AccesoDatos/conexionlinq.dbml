@@ -49,4 +49,18 @@
     <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.sp_IngresarRegistroCicloMenstrual" Method="sp_IngresarRegistroCicloMenstrual">
+    <Parameter Name="UsuarioID" Parameter="usuarioID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaInicioCiclo" Parameter="fechaInicioCiclo" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="DuracionCiclo" Parameter="duracionCiclo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DuracionMenstruacion" Parameter="duracionMenstruacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaNacimiento" Parameter="fechaNacimiento" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_CerrarSesionesAntiguas" Method="sp_CerrarSesionesAntiguas">
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

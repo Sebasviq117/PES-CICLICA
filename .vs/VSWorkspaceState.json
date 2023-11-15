@@ -3,8 +3,9 @@
     "",
     "\\ProyectoCiclica",
     "\\ProyectoCiclica\\Backend",
+    "\\ProyectoCiclica\\Backend\\Entidades",
     "\\ProyectoCiclica\\Backend\\Logica"
   ],
-  "SelectedNode": "\\ProyectoCiclica\\Backend\\Logica\\LogSession.cs",
+  "SelectedNode": "\\ProyectoCiclica\\Backend\\Entidades\\Usuario.cs",
   "PreviewInSolutionExplorer": false
 }

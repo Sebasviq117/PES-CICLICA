@@ -116,7 +116,7 @@ namespace Backend.Logica
 
                     string session = LogSession.ingresarSession((int)idReturn);
                     
-                    //Validar correo , contrasena y  **si la session se creo
+                    //Validar correo , contrasena y si la session se creo
                     if (errorId == 0 && idReturn != 0 && session != null)
                     {
                         //Exitoso

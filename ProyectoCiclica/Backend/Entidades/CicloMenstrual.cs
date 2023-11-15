@@ -8,11 +8,12 @@ namespace Backend.Entidades
 {
     public class CicloMenstrual
     {
-       
+
         public int UsuarioID { get; set; }
-        public DateTime FechaInicioCiclo { get; set; } 
-        public int DuracionCiclo { get; set;}
-        public int DuracionMenstruacion { get; set;}
+        public DateTime FechaInicioCiclo { get; set; }
+        public int DuracionCiclo { get; set; }
+        public int DuracionMenstruacion { get; set; }
         public DateTime FechaNacimiento { get; set; }
     }
 }
+

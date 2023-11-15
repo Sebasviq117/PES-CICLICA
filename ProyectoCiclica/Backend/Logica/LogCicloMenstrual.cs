@@ -10,12 +10,20 @@ namespace Backend.Logica
 {
     public class LogCicloMenstrual
     {
-        public ResIngresarCicloMenstrual IngresarCicloMenstrual(ReqIngresarCicloMenstrual req) { 
-            ResIngresarCicloMenstrual res  = new ResIngresarCicloMenstrual();
+        public ResIngresarCicloMenstrual IngresarCicloMenstrual(ReqIngresarCicloMenstrual req)
+        {
+            ResIngresarCicloMenstrual res = new ResIngresarCicloMenstrual();
 
-            try 
-            {
-                if(req.elcicloMenstrual.UsuarioID == 0)
+            try
+            {   //debo quitarlo?? ya que se debe obtener de la session
+                if (LogSession.EvaluarSession(req.session)) 
+                { 
+                    res.resultado = false;
+                    res.errorCode = (int)EnumErrores.SessionInvalida;
+                    res.errorMensaje = "Session Invalida";
+                }
+
+                if (req.elcicloMenstrual.UsuarioID == 0)
                 {
                     res.resultado = false;
                     res.errorMensaje = "Id Usuario Faltante";
@@ -25,7 +33,7 @@ namespace Backend.Logica
                     res.resultado = false;
                     res.errorMensaje = "Fecha Faltante";
                 }
-                else if (req.elcicloMenstrual.DuracionCiclo == 0 )
+                else if (req.elcicloMenstrual.DuracionCiclo == 0)
                 {
                     res.resultado = false;
                     res.errorMensaje = "Duracion Ciclo Faltante";
@@ -54,15 +62,17 @@ namespace Backend.Logica
                     {
                         res.resultado = true;
                     }
-                    else { 
+                    else
+                    {
                         res.resultado = false;
                         res.errorMensaje = "error interno";
                         Console.WriteLine(errorDescripcion);
 
                     }
                 }
-            }    
-            catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 res.resultado = false;
                 res.errorMensaje = "Error interno";
                 Console.WriteLine(ex.Message);

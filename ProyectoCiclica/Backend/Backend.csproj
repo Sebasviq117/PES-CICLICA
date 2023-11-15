@@ -52,16 +52,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>conexionlinq.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\CicloMenstrual.cs" />
     <Compile Include="Entidades\Enum\EnumErrores.cs" />
     <Compile Include="Entidades\Login.cs" />
     <Compile Include="Entidades\Request\ReqBase.cs" />
+    <Compile Include="Entidades\Request\ReqIngresarCicloMenstrual.cs" />
     <Compile Include="Entidades\Request\ReqIngresarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqLoginUsuario.cs" />
     <Compile Include="Entidades\Response\ResBase.cs" />
+    <Compile Include="Entidades\Response\ResIngresarCicloMenstrual.cs" />
     <Compile Include="Entidades\Response\ResIngresarUsuario.cs" />
     <Compile Include="Entidades\Response\ResLoginUsuario.cs" />
     <Compile Include="Entidades\Session.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Logica\LogCicloMenstrual.cs" />
     <Compile Include="Logica\LogSession.cs" />
     <Compile Include="Logica\LogUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

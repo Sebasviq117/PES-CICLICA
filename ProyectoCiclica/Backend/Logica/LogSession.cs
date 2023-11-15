@@ -18,7 +18,7 @@ namespace Backend.Logica
             string errorDescripcion = "";
 
             conexionlinqDataContext miLinq = new conexionlinqDataContext();
-            sp_ObtenerSessionResult sessionLinq = (sp_ObtenerSessionResult) miLinq.sp_ObtenerSession(session, ref idReturn, ref errorId, ref errorDescripcion);
+            sp_ObtenerSessionResult sessionLinq = (sp_ObtenerSessionResult)miLinq.sp_ObtenerSession(session, ref idReturn, ref errorId, ref errorDescripcion);
             if (errorId == 0 && idReturn != 0)
             {
                 //Agregar resto de campos 
@@ -44,11 +44,11 @@ namespace Backend.Logica
 
             conexionlinqDataContext miLinq = new conexionlinqDataContext();
             string session = Guid.NewGuid().ToString();
-            miLinq.sp_IngresarSession(idUsuario, session,ref idReturn, ref errorId, ref errorDescripcion);
+            miLinq.sp_IngresarSession(idUsuario, session, ref idReturn, ref errorId, ref errorDescripcion);
             if (errorId == 0 && idReturn != 0)
             {
                 //Agregar resto de campos 
-                return session ;
+                return session;
             }
             else
             {
@@ -56,10 +56,17 @@ namespace Backend.Logica
             }
         }
 
-        public static void EvaluarSession()
-        {
-           
-        }
 
+        public static Boolean EvaluarSession(String session)
+        {
+            if (string.IsNullOrEmpty(session) || (LogSession.obtenerSession(req.session).Session_Estado = 0)) 
+            {
+                    return false;
+            }
+            else 
+            { 
+                return true; 
+            }
+        }   
     }
 }
