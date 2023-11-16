@@ -14,9 +14,6 @@
     <MauiXaml Update="AppShell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MainPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="Platforms\Windows\App.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -26,13 +23,25 @@
     <MauiXaml Update="Resources\Styles\Styles.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\LogCiclica.xaml">
+    <MauiXaml Update="Views\Controles\TabBarIconView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\RegCiclica.xaml">
+    <MauiXaml Update="Views\Controles\TabBarView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\VistaPrincipal.xaml">
+    <MauiXaml Update="Views\Paginas\LogCiclica.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Paginas\PerfilUsuario.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Paginas\RegCiclica.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Paginas\TiendaCiclica.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Paginas\VistaPrincipal.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

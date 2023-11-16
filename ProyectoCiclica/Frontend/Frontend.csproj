@@ -12,7 +12,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>Frontend</ApplicationTitle>
+		<ApplicationTitle>Ciclica</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.frontend</ApplicationId>
@@ -32,14 +32,14 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\Images\logo_vag_red2.png" ForegroundFile="Resources\Images\logo_vag_red2.png" Color="#e58c8c" />
+		
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Images\logo_ciclica2.png" Color="#e58c8c" BaseSide="200" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\logo_ciclica2.png" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -57,13 +57,16 @@
 	  <None Remove="Resources\Fonts\Verahi__.ttf" />
 	  <None Remove="Resources\Fonts\Verah___.ttf" />
 	  <None Remove="Resources\Fonts\windows_command_prompt.ttf" />
+	  <None Remove="Resources\Images\calendario.png" />
 	  <None Remove="Resources\Images\calendarionav.png" />
 	  <None Remove="Resources\Images\logored.png" />
 	  <None Remove="Resources\Images\logo_ciclica.jpg" />
 	  <None Remove="Resources\Images\logo_ciclica2.png" />
 	  <None Remove="Resources\Images\logo_vag_red.png" />
 	  <None Remove="Resources\Images\logo_vag_red2.png" />
+	  <None Remove="Resources\Images\tienda.png" />
 	  <None Remove="Resources\Images\tiendanav.png" />
+	  <None Remove="Resources\Images\usuario.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -81,13 +84,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\LogCiclica.xaml">
+	  <MauiXaml Update="Views\Controles\TabBarIconView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\RegCiclica.xaml">
+	  <MauiXaml Update="Views\Controles\TabBarView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\VistaPrincipal.xaml">
+	  <MauiXaml Update="Views\Paginas\LogCiclica.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\PerfilUsuario.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\RegCiclica.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\TiendaCiclica.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\VistaPrincipal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
+using SimpleToolkit.Core;
+using SimpleToolkit.SimpleShell;
 
 namespace Frontend
 {
@@ -11,6 +13,8 @@ namespace Frontend
             builder
                 .ConfigureSyncfusionCore()
                 .UseMauiApp<App>()
+                .UseSimpleToolkit()
+                .UseSimpleShell()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -22,12 +26,11 @@ namespace Frontend
                     fonts.AddFont("windows_command_prompt.ttf", "Prompt");
                     fonts.AddFont("fa-brands-400.ttf", "FontAwesome");
                     fonts.AddFont("fa-solid-900.ttf", "FontAwesome6");
-
-
                 });
 
-#if DEBUG
-		builder.Logging.AddDebug();
+
+#if ANDROID || IOS
+		builder.DisplayContentBehindBars();
 #endif
 
             return builder.Build();

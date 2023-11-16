@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:Models="clr-namespace:Frontend.Models"
+             xmlns:simpleCore="clr-namespace:SimpleToolkit.Core;assembly=SimpleToolkit.Core"
+             x:Class="Frontend.Views.VistaPrincipal"
+             xmlns:xc="clr-namespace:XCalendar.Maui.Views;assembly=XCalendar.Maui"
+             xmlns:c="clr-namespace:Frontend.Views.Controles"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#b01d2e">
+
+    <NavigationPage.HasNavigationBar>
+        <OnIdiom x:TypeArguments="x:Boolean">
+            <OnIdiom.Phone>true</OnIdiom.Phone>
+            <OnIdiom.Tablet>false</OnIdiom.Tablet>
+        </OnIdiom>
+    </NavigationPage.HasNavigationBar>
+
+    <Grid RowDefinitions=".4*,.6*">
+        <Grid Margin="0,0,0,-150" Grid.Row="0">
+            <VerticalStackLayout VerticalOptions="Center">
+                <Border BackgroundColor="#fbc5ca"
+                       HeightRequest="450"
+                       HorizontalOptions="Start"
+                       WidthRequest="343"
+                       StrokeShape="RoundRectangle 35"
+                       Margin="25,0,0,0">
+                    <Border.Shadow>
+                        <Shadow
+                            Brush="darkred"
+                            Radius="10"
+                            Opacity="1"
+                            Offset="5,5"/>
+                    </Border.Shadow>
+                </Border>
+            </VerticalStackLayout>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,160,0,-20">
+            <VerticalStackLayout>
+                <BoxView                    
+                     HeightRequest="350"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     WidthRequest="397"
+                     CornerRadius="55,55,0,0"
+                     Color="#fbc5ca">
+                 
+                </BoxView>
+                <Border 
+                    Grid.Row="1"
+                    HeightRequest="60"
+                    WidthRequest="300"
+                    StrokeShape="RoundRectangle 55"
+                    Margin="20,-330">
+                    <Border.Shadow>
+                        <Shadow
+                            Brush="gray"
+                            Radius="10"
+                            Opacity="1"
+                            Offset="5,5"/>
+                    </Border.Shadow>
+                    <Button
+                        BackgroundColor="#f4d7dc"
+                        WidthRequest="300"
+                        HeightRequest="60"
+                        CornerRadius="55"
+                        Text="Registro diario"
+                        FontFamily="Verahb"
+                        FontSize="20"
+                        TextColor="#b01d2e"/>
+                </Border>
+                <Border 
+                    Grid.Row="1"
+                    HeightRequest="60"
+                    WidthRequest="300"
+                    StrokeShape="RoundRectangle 55"
+                    Margin="0,350,0,10">
+                    <Border.Shadow>
+                        <Shadow
+                            Brush="gray"
+                            Radius="10"
+                            Opacity="1"
+                            Offset="5,5"/>
+                    </Border.Shadow>
+                    <Button
+                        BackgroundColor="#f4d7dc"
+                        WidthRequest="300"
+                        HeightRequest="60"
+                        CornerRadius="55"
+                        Text="Registra tu ciclo"
+                        FontFamily="Verahb"
+                        FontSize="20"
+                        TextColor="#b01d2e"/>
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    HeightRequest="60"
+                    WidthRequest="300"
+                    StrokeShape="RoundRectangle 55"
+                    Margin="0,10,0,0">
+                    <Border.Shadow>
+                        <Shadow
+                            Brush="gray"
+                            Radius="10"
+                            Opacity="1"
+                            Offset="5,5"/>
+                    </Border.Shadow>
+
+                    <Button
+                        BackgroundColor="#f4d7dc"
+                        WidthRequest="300"
+                        HeightRequest="60"
+                        CornerRadius="55"
+                        Text="Tu salud sexual"
+                        FontFamily="Verahb"
+                        FontSize="20"
+                        TextColor="#b01d2e"/>
+                    
+                </Border>
+                <VerticalStackLayout>
+                    <Frame
+                         Grid.Row="1"
+                         BackgroundColor="#b01d2e"
+                         HeightRequest="50"
+                         WidthRequest="50"
+                         CornerRadius="50"
+                         HorizontalOptions="Start"
+                         Margin="55,-215,20,20">
+                    </Frame>
+                    <Frame
+                         Grid.Row="1"
+                         BackgroundColor="#b01d2e"
+                         HeightRequest="50"
+                         WidthRequest="50"
+                         CornerRadius="50"
+                         HorizontalOptions="Start"
+                        Margin="55,10,0,0">
+                    </Frame>
+                    <Frame
+                         Grid.Row="1"
+                         BackgroundColor="#b01d2e"
+                         HeightRequest="50"
+                         WidthRequest="50"
+                         CornerRadius="50"
+                         HorizontalOptions="Start"
+                        Margin="55,30,0,0">
+                    </Frame>
+                    <Label
+                        FontFamily="FontAwesome6" 
+                        Text="{x:Static Models:Icons.CalendarDays}"
+                        FontSize="25"
+                        Margin="70,-200,20,20"
+                        TextColor="#fbc5ca"/>
+                    <Label
+                        FontFamily="FontAwesome6" 
+                        Text="{x:Static Models:Icons.Droplet}"
+                        FontSize="25"
+                        Margin="70,35,20,20"
+                        TextColor="#fbc5ca"/>
+                    <Label
+                        FontFamily="FontAwesome6" 
+                        Text="{x:Static Models:Icons.Heart}"
+                        FontSize="25"
+                        Margin="68,35,20,20"
+                        TextColor="#fbc5ca"/>
+                </VerticalStackLayout>
+                
+
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

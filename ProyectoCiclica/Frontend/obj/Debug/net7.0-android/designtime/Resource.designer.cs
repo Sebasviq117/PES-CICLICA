@@ -28129,64 +28129,64 @@ namespace Frontend
 			public const int btn_radio_on_to_off_mtrl_animation = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int calendarionav = 2131165307;
+			public const int calendario = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int design_fab_background = 2131165308;
+			public const int calendarionav = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int design_ic_visibility = 2131165309;
+			public const int design_fab_background = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int design_ic_visibility_off = 2131165310;
+			public const int design_ic_visibility = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int design_password_eye = 2131165311;
+			public const int design_ic_visibility_off = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int design_snackbar_background = 2131165312;
+			public const int design_password_eye = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int dotnet_bot = 2131165313;
+			public const int design_snackbar_background = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int ic_clock_black_24dp = 2131165314;
+			public const int dotnet_bot = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int ic_keyboard_black_24dp = 2131165315;
+			public const int ic_clock_black_24dp = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int ic_m3_chip_check = 2131165316;
+			public const int ic_keyboard_black_24dp = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int ic_m3_chip_checked_circle = 2131165317;
+			public const int ic_m3_chip_check = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int ic_m3_chip_close = 2131165318;
+			public const int ic_m3_chip_checked_circle = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int ic_mtrl_checked_circle = 2131165319;
+			public const int ic_m3_chip_close = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int ic_mtrl_chip_checked_black = 2131165320;
+			public const int ic_mtrl_checked_circle = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int ic_mtrl_chip_checked_circle = 2131165321;
+			public const int ic_mtrl_chip_checked_black = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int ic_mtrl_chip_close_circle = 2131165322;
+			public const int ic_mtrl_chip_checked_circle = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int ic_mtrl_chip_close_circle = 2131165323;
 			
 			// aapt resource value: 0x7F070090
 			public const int logored = 2131165328;
 			
-			// aapt resource value: 0x7F07008B
-			public const int logo_ciclica = 2131165323;
-			
 			// aapt resource value: 0x7F07008C
-			public const int logo_ciclica2 = 2131165324;
+			public const int logo_ciclica = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int logo_ciclicared = 2131165325;
+			public const int logo_ciclica2 = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
 			public const int logo_vag_red = 2131165326;
@@ -28411,13 +28411,19 @@ namespace Frontend
 			public const int test_level_drawable = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int tiendanav = 2131165401;
+			public const int tienda = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int tooltip_frame_dark = 2131165402;
+			public const int tiendanav = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int tooltip_frame_light = 2131165403;
+			public const int tooltip_frame_dark = 2131165403;
+			
+			// aapt resource value: 0x7F0700DC
+			public const int tooltip_frame_light = 2131165404;
+			
+			// aapt resource value: 0x7F0700DD
+			public const int usuario = 2131165405;
 			
 			static Drawable()
 			{
