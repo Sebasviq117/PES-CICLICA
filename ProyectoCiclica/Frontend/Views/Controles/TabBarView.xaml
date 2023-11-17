@@ -9,8 +9,8 @@
     <ContentView.Resources>
         <x:Double x:Key="ViewHeight">80</x:Double>
         <Style TargetType="{x:Type c:TabBarIconView}">
-            <Setter Property="HeightRequest" Value="20"/>
-            <Setter Property="WidthRequest" Value="30"/>
+            <Setter Property="HeightRequest" Value="25"/>
+            <Setter Property="WidthRequest" Value="35"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="VerticalOptions" Value="Start"/>
         </Style>

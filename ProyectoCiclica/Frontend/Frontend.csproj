@@ -58,7 +58,6 @@
 	  <None Remove="Resources\Fonts\Verah___.ttf" />
 	  <None Remove="Resources\Fonts\windows_command_prompt.ttf" />
 	  <None Remove="Resources\Images\calendario.png" />
-	  <None Remove="Resources\Images\calendarionav.png" />
 	  <None Remove="Resources\Images\logored.png" />
 	  <None Remove="Resources\Images\logo_ciclica.jpg" />
 	  <None Remove="Resources\Images\logo_ciclica2.png" />

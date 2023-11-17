@@ -42,7 +42,9 @@ public partial class LogCiclica : ContentPage
                 resLoginUsuario = JsonConvert.DeserializeObject<ResLoginUsuario>(responseContent);
                 if (resLoginUsuario.resultado)
                 {
-                    await Navigation.PushAsync(new AppShell());
+                    // En LogCiclica después de la autenticación exitosa
+                    Application.Current.MainPage = new AppShell();
+
                 }
                 else
                 {

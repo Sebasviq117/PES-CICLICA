@@ -7,7 +7,7 @@
         <Style x:Key="IconStyle" TargetType="{x:Type simpleCore:Icon}">
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="Fill"/>
-            <Setter Property="TintColor" Value="#b01d2e"/>
+            <Setter Property="TintColor" Value="{StaticResource Cuaternary}"/>
         </Style>
     </ContentView.Resources>
 
