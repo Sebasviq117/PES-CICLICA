@@ -4,10 +4,15 @@
              x:Class="Frontend.Views.Paginas.TiendaCiclica"
              xmlns:local="clr-namespace:Frontend.Views.Paginas"
              Title="TiendaCiclica">
-    <VerticalStackLayout>
-        <Label 
-            Text="Tienda Ciclica"
-            VerticalOptions="CenterAndExpand" 
-            HorizontalOptions="CenterAndExpand" />
-    </VerticalStackLayout>
+    
+    <ScrollView BackgroundColor="#e58c8c"
+                HeightRequest="800"
+                WidthRequest="400">
+        <Label Text=" Tienda Ciclica"
+               FontSize="30"
+               TextColor="Black"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
+
+    </ScrollView>
 </ContentPage>
