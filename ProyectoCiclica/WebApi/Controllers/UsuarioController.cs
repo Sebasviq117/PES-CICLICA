@@ -22,6 +22,5 @@ namespace WebApi.Controllers
             LogUsuario miLogica = new LogUsuario();
             return miLogica.LoginUsuario(req);
         }
-
     }
 }

@@ -2,10 +2,13 @@
 using Backend.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using static System.Collections.Specialized.BitVector32;
 
 namespace Backend.Logica
@@ -58,11 +61,9 @@ namespace Backend.Logica
 
                     conexionlinqDataContext miLinq = new conexionlinqDataContext();
                     miLinq.sp_IngresarUsuario(req.elUsuario.nombre, req.elUsuario.primerApellido, req.elUsuario.segundoApellido, req.elUsuario.correo, req.elUsuario.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
-                    // realize una variable de tipo Int para capturar el IdUsuario una vez creado el usuario
-
-                    if (errorId == 0 && idReturn != 0 )
+                    if (errorId == 0 && idReturn != 0)
                     {
-                        //Exitos
+                        //Exitoso
                         res.resultado = true;
                     }
                     else
@@ -115,13 +116,13 @@ namespace Backend.Logica
                     miLinq.SP_LoginUsuario(req.userLog.correo, req.userLog.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
 
                     string session = LogSession.ingresarSession((int)idReturn);
-                    
-                    //Validar correo , contrasena y si la session se creo
+
+                    //Validar correo , contrasena y  **si la session se creo
                     if (errorId == 0 && idReturn != 0 && session != null)
                     {
                         //Exitoso
                         res.resultado = true;
-                        res.session = session;
+                        res.session = session; //No es la misma que la de BD
                     }
                     else
                     {
@@ -136,7 +137,7 @@ namespace Backend.Logica
             }
             catch (Exception ex)
             {
-                res.session = null;  
+                res.session = null;
                 res.resultado = false;
                 res.errorMensaje = "Error interno";
                 res.errorCode = (int)EnumErrores.ErrorInterno;
@@ -144,6 +145,5 @@ namespace Backend.Logica
             }
             return res;
         }
-
     }
-    }
+ }

@@ -52,20 +52,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>conexionlinq.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Carrito.cs" />
+    <Compile Include="Entidades\CategoriaProductos.cs" />
     <Compile Include="Entidades\CicloMenstrual.cs" />
     <Compile Include="Entidades\Enum\EnumErrores.cs" />
     <Compile Include="Entidades\Login.cs" />
+    <Compile Include="Entidades\Notifi_Anticoncep.cs" />
+    <Compile Include="Entidades\Producto.cs" />
+    <Compile Include="Entidades\Request\ReqActualizarNotificaciones.cs" />
     <Compile Include="Entidades\Request\ReqBase.cs" />
+    <Compile Include="Entidades\Request\ReqHistorialAnticonceptivos.cs" />
+    <Compile Include="Entidades\Request\ReqInsertarNotificaciones.cs" />
+    <Compile Include="Entidades\Request\ReqMostrarConsejos.cs" />
+    <Compile Include="Entidades\Request\ReqObtenerAnticonceptivos.cs" />
+    <Compile Include="Entidades\Request\ReqObtenerCategoriaProductos.cs" />
     <Compile Include="Entidades\Request\ReqIngresarCicloMenstrual.cs" />
     <Compile Include="Entidades\Request\ReqIngresarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqLoginUsuario.cs" />
+    <Compile Include="Entidades\Request\ReqObtenerProductos.cs" />
+    <Compile Include="Entidades\Response\ResActualizarNotificaciones.cs" />
     <Compile Include="Entidades\Response\ResBase.cs" />
+    <Compile Include="Entidades\Response\ResHistorialAnticonceptivos.cs" />
+    <Compile Include="Entidades\Response\ResInsertarNotificaciones.cs" />
+    <Compile Include="Entidades\Response\ResMostrarConsejos.cs" />
+    <Compile Include="Entidades\Response\ResObtenerAnticonceptivos.cs" />
+    <Compile Include="Entidades\Response\ResObtenerCategoriaProductos.cs" />
     <Compile Include="Entidades\Response\ResIngresarCicloMenstrual.cs" />
     <Compile Include="Entidades\Response\ResIngresarUsuario.cs" />
     <Compile Include="Entidades\Response\ResLoginUsuario.cs" />
+    <Compile Include="Entidades\Response\ResObtenerProductos.cs" />
     <Compile Include="Entidades\Session.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Logica\LogCarrito.cs" />
+    <Compile Include="Logica\LogCategoriaProducto.cs" />
     <Compile Include="Logica\LogCicloMenstrual.cs" />
+    <Compile Include="Logica\LogNotifiAnticoncep.cs" />
+    <Compile Include="Logica\LogProducto.cs" />
     <Compile Include="Logica\LogSession.cs" />
     <Compile Include="Logica\LogUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

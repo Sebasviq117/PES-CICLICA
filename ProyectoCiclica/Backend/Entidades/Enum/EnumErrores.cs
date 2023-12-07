@@ -16,10 +16,21 @@ namespace Backend.Entidades
         CorreoFaltante = 004,
         ContrasenaFaltante = 005,
         ErrorLogin = 006,
+        //Errores de Session
         ErrorSession = 007,
         SessionFaltante = 008,
         SessionCerrada = 009,
         SessionInvalida = 010,
+        //Errores de Ciclo Menstrual
+        FechaFaltante = 011,
+        DuracionCicloFaltante = 012,
+        DuracionMenstrualFaltante = 013,
+        ErrorCicloMenstrual = 014,
+        ErrorUsuario = 015,
+        //Errores de Anticonceptivos
+        AnticonceptivoInexistente = 021,
+        EstadoDeNotifi_0 = 022,
+        SinRegistro = 023,
 
     }
 }

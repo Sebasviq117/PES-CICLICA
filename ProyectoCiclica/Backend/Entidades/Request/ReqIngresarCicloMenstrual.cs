@@ -8,6 +8,6 @@ namespace Backend.Entidades
 {
     public class ReqIngresarCicloMenstrual : ReqBase
     {
-        public CicloMenstrual elcicloMenstrual { get; set; }
+        public CicloMenstrual elcicloMenstrual { get; set; } 
     }
 }
