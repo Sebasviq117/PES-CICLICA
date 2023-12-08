@@ -31,6 +31,7 @@ namespace Backend.Entidades
         AnticonceptivoInexistente = 021,
         EstadoDeNotifi_0 = 022,
         SinRegistro = 023,
-
+        ErrorDeNotificacion = 24,
+        YaExisteRegistroNotifi = 25,
     }
 }

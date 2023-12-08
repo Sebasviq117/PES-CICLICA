@@ -8,5 +8,6 @@ namespace Backend.Entidades
 {
     public class ReqHistorialAnticonceptivos : ReqBase
     {
+        public Notifi_Anticoncep NotifiAnticoncep { get; set; }
     }
 }

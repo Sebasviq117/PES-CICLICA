@@ -8,6 +8,6 @@ namespace Backend.Entidades
 {
     public class ResObtenerAnticonceptivos : ResBase
     {
-
+        public List<Anticonceptivos> ListaDeAnticoncepDatos { get; set; }
     }
 }

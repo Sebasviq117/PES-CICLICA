@@ -122,16 +122,6 @@ namespace Backend.AccesoDatos
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ObtenerAnticonceptivos")]
-		public ISingleResult<sp_ObtenerAnticonceptivosResult> sp_ObtenerAnticonceptivos([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USER_ID", DbType="Int")] System.Nullable<int> uSER_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ANTI_CONCEP_ID", DbType="Int")] System.Nullable<int> aNTI_CONCEP_ID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReturn, errorId, errorDescripcion, uSER_ID, aNTI_CONCEP_ID);
-			idReturn = ((System.Nullable<int>)(result.GetParameterValue(0)));
-			errorId = ((System.Nullable<int>)(result.GetParameterValue(1)));
-			errorDescripcion = ((string)(result.GetParameterValue(2)));
-			return ((ISingleResult<sp_ObtenerAnticonceptivosResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_MostrarHistorialAnticonceptivos")]
 		public ISingleResult<sp_MostrarHistorialAnticonceptivosResult> sp_MostrarHistorialAnticonceptivos([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USER_ID", DbType="Int")] System.Nullable<int> uSER_ID)
 		{
@@ -152,20 +142,30 @@ namespace Backend.AccesoDatos
 			return ((ISingleResult<sp_MostrarConsejosResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_InsertarNotificacion")]
-		public int sp_InsertarNotificacion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USER_ID", DbType="Int")] System.Nullable<int> uSER_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ANTI_CONCEP_ID", DbType="Int")] System.Nullable<int> aNTI_CONCEP_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FechaHoraNotificacion", DbType="DateTime")] System.Nullable<System.DateTime> fechaHoraNotificacion)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ActualizarNotificacion")]
+		public int sp_ActualizarNotificacion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USER_ID", DbType="Int")] System.Nullable<int> uSER_ID)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReturn, errorId, errorDescripcion, uSER_ID, aNTI_CONCEP_ID, fechaHoraNotificacion);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReturn, errorId, errorDescripcion, uSER_ID);
 			idReturn = ((System.Nullable<int>)(result.GetParameterValue(0)));
 			errorId = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			errorDescripcion = ((string)(result.GetParameterValue(2)));
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ActualizarNotificacion")]
-		public int sp_ActualizarNotificacion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USER_ID", DbType="Int")] System.Nullable<int> uSER_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ANTI_CONCEP_ID", DbType="Int")] System.Nullable<int> aNTI_CONCEP_ID)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ObtenerAnticonceptivos")]
+		public ISingleResult<sp_ObtenerAnticonceptivosResult> sp_ObtenerAnticonceptivos([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USER_ID", DbType="Int")] System.Nullable<int> uSER_ID)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReturn, errorId, errorDescripcion, uSER_ID, aNTI_CONCEP_ID);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReturn, errorId, errorDescripcion, uSER_ID);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(0)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			errorDescripcion = ((string)(result.GetParameterValue(2)));
+			return ((ISingleResult<sp_ObtenerAnticonceptivosResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_InsertarNotificacion")]
+		public int sp_InsertarNotificacion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="USER_ID", DbType="Int")] System.Nullable<int> uSER_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ANTI_CONCEP_ID", DbType="Int")] System.Nullable<int> aNTI_CONCEP_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FechaNotifi", DbType="DateTime")] System.Nullable<System.DateTime> fechaNotifi, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HoraNotifi", DbType="DateTime")] System.Nullable<System.DateTime> horaNotifi)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReturn, errorId, errorDescripcion, uSER_ID, aNTI_CONCEP_ID, fechaNotifi, horaNotifi);
 			idReturn = ((System.Nullable<int>)(result.GetParameterValue(0)));
 			errorId = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			errorDescripcion = ((string)(result.GetParameterValue(2)));
@@ -289,50 +289,6 @@ namespace Backend.AccesoDatos
 		}
 	}
 	
-	public partial class sp_ObtenerAnticonceptivosResult
-	{
-		
-		private string _ANTI_CONCEP_NOMBRE;
-		
-		private string _ANTI_EFECTIVIDAD;
-		
-		public sp_ObtenerAnticonceptivosResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ANTI_CONCEP_NOMBRE", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string ANTI_CONCEP_NOMBRE
-		{
-			get
-			{
-				return this._ANTI_CONCEP_NOMBRE;
-			}
-			set
-			{
-				if ((this._ANTI_CONCEP_NOMBRE != value))
-				{
-					this._ANTI_CONCEP_NOMBRE = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ANTI_EFECTIVIDAD", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string ANTI_EFECTIVIDAD
-		{
-			get
-			{
-				return this._ANTI_EFECTIVIDAD;
-			}
-			set
-			{
-				if ((this._ANTI_EFECTIVIDAD != value))
-				{
-					this._ANTI_EFECTIVIDAD = value;
-				}
-			}
-		}
-	}
-	
 	public partial class sp_MostrarHistorialAnticonceptivosResult
 	{
 		
@@ -434,6 +390,68 @@ namespace Backend.AccesoDatos
 				if ((this._CONSJ_CONSEJO != value))
 				{
 					this._CONSJ_CONSEJO = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_ObtenerAnticonceptivosResult
+	{
+		
+		private int _ANTI_CONCEP_ID;
+		
+		private string _ANTI_CONCEP_NOMBRE;
+		
+		private string _ANTI_EFECTIVIDAD;
+		
+		public sp_ObtenerAnticonceptivosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ANTI_CONCEP_ID", DbType="Int NOT NULL")]
+		public int ANTI_CONCEP_ID
+		{
+			get
+			{
+				return this._ANTI_CONCEP_ID;
+			}
+			set
+			{
+				if ((this._ANTI_CONCEP_ID != value))
+				{
+					this._ANTI_CONCEP_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ANTI_CONCEP_NOMBRE", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string ANTI_CONCEP_NOMBRE
+		{
+			get
+			{
+				return this._ANTI_CONCEP_NOMBRE;
+			}
+			set
+			{
+				if ((this._ANTI_CONCEP_NOMBRE != value))
+				{
+					this._ANTI_CONCEP_NOMBRE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ANTI_EFECTIVIDAD", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string ANTI_EFECTIVIDAD
+		{
+			get
+			{
+				return this._ANTI_EFECTIVIDAD;
+			}
+			set
+			{
+				if ((this._ANTI_EFECTIVIDAD != value))
+				{
+					this._ANTI_EFECTIVIDAD = value;
 				}
 			}
 		}

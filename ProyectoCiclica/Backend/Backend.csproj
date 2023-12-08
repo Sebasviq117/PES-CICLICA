@@ -55,7 +55,9 @@
     <Compile Include="Entidades\Carrito.cs" />
     <Compile Include="Entidades\CategoriaProductos.cs" />
     <Compile Include="Entidades\CicloMenstrual.cs" />
+    <Compile Include="Entidades\Consejos.cs" />
     <Compile Include="Entidades\Enum\EnumErrores.cs" />
+    <Compile Include="Entidades\Anticonceptivos.cs" />
     <Compile Include="Entidades\Login.cs" />
     <Compile Include="Entidades\Notifi_Anticoncep.cs" />
     <Compile Include="Entidades\Producto.cs" />

@@ -8,5 +8,6 @@ namespace Backend.Entidades
 {
     public class ReqActualizarNotificaciones : ReqBase
     {
+        public Notifi_Anticoncep NotifiAnticoncep { get; set; }
     }
 }

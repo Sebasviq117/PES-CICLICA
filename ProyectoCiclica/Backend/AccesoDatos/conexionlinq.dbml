@@ -58,17 +58,6 @@
     <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.sp_ObtenerAnticonceptivos" Method="sp_ObtenerAnticonceptivos">
-    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
-    <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ANTI_CONCEP_ID" Parameter="aNTI_CONCEP_ID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="sp_ObtenerAnticonceptivosResult">
-      <Column Name="ANTI_CONCEP_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ANTI_EFECTIVIDAD" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_MostrarHistorialAnticonceptivos" Method="sp_MostrarHistorialAnticonceptivos">
     <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
@@ -90,21 +79,32 @@
       <Column Name="CONSJ_CONSEJO" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.sp_ActualizarNotificacion" Method="sp_ActualizarNotificacion">
+    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
+    <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ObtenerAnticonceptivos" Method="sp_ObtenerAnticonceptivos">
+    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
+    <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_ObtenerAnticonceptivosResult">
+      <Column Name="ANTI_CONCEP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ANTI_CONCEP_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ANTI_EFECTIVIDAD" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.sp_InsertarNotificacion" Method="sp_InsertarNotificacion">
     <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
     <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
     <Parameter Name="ANTI_CONCEP_ID" Parameter="aNTI_CONCEP_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="FechaHoraNotificacion" Parameter="fechaHoraNotificacion" Type="System.DateTime" DbType="DateTime" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.sp_ActualizarNotificacion" Method="sp_ActualizarNotificacion">
-    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(255)" Direction="InOut" />
-    <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ANTI_CONCEP_ID" Parameter="aNTI_CONCEP_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaNotifi" Parameter="fechaNotifi" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HoraNotifi" Parameter="horaNotifi" Type="System.DateTime" DbType="DateTime" />
     <Return Type="System.Int32" />
   </Function>
 </Database>
