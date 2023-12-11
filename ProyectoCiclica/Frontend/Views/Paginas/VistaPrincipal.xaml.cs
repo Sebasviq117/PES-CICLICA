@@ -14,8 +14,31 @@ public partial class VistaPrincipal : ContentPage
         typeof(DateTime),
         declaringType: typeof(VistaPrincipal),
         defaultBindingMode: BindingMode.TwoWay,
-        defaultValue: DateTime.Now
+        defaultValue: DateTime.Now,
+        propertyChanged: SelectedDatePropertyChanged
         );
+    private static void SelectedDatePropertyChanged(BindableObject bindable, object oldValue, object newValue) 
+    {
+        var controls = (VistaPrincipal)bindable;
+        if (newValue != null) 
+        {
+            var newDate = (DateTime)newValue;
+
+            if (controls._tempDate.Month == newDate.Month && controls._tempDate.Year == newDate.Year) 
+            {
+                var currentDate = controls.Dates.Where(f => f.Date == newDate.Date).FirstOrDefault();
+                if (currentDate != null)
+                {
+                    controls.Dates.ToList().ForEach(f => f.IsCurrentDate = false);
+                    currentDate.IsCurrentDate = true;
+                }
+            }
+            else
+            {
+                controls.BindDates(newDate);
+            }  
+        }
+    }
     public DateTime SelectedDate
     {
         get => (DateTime)GetValue(SelectedDateProperty);
@@ -30,16 +53,6 @@ public partial class VistaPrincipal : ContentPage
         InitializeComponent();
         BindDates(DateTime.Now);
         NavigationPage.SetHasNavigationBar(this, false);
-    }
-
-    private void ImageButton_calendario(object sender, EventArgs e)
-    {
-
-    }
-
-    private void ImageButton_tienda(object sender, EventArgs e)
-    {
-
     }
     private void BindDates(DateTime date)
     {
@@ -67,8 +80,6 @@ public partial class VistaPrincipal : ContentPage
     {
         _tempDate = currentDate.Date;
         SelectedDate = currentDate.Date;
-        Dates.ToList().ForEach(f => f.IsCurrentDate = false);
-        currentDate.IsCurrentDate = true; 
     });
 
     public ICommand NextMonthCommand => new Command(() =>

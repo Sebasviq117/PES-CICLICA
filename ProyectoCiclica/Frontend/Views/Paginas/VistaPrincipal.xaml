@@ -6,9 +6,8 @@
              x:Class="Frontend.Views.VistaPrincipal"
              xmlns:c="clr-namespace:Frontend.Views.Controles"
              x:Name="this"
-             
              Shell.NavBarIsVisible="False"
-             BackgroundColor="#b01d2e">
+             BackgroundColor="#f4d7dc">
 
     <NavigationPage.HasNavigationBar>
         <OnIdiom x:TypeArguments="x:Boolean">
@@ -18,6 +17,39 @@
     </NavigationPage.HasNavigationBar>
 
     <Grid RowDefinitions=".4*,.6*">
+        <Border
+            HeightRequest="50"
+            WidthRequest="60"
+            HorizontalOptions="End"
+            StrokeShape="RoundRectangle 55"
+            Margin="0,0,10,230">
+                <Border.Shadow>
+                <Shadow
+                    Brush="gray"
+                    Radius="10"
+                    Opacity="1"
+                    Offset="5,5"/>
+            </Border.Shadow>
+            <Button
+                BackgroundColor="#e58c8c"
+                WidthRequest="60"
+                HeightRequest="50"
+                CornerRadius="55"/>
+        </Border>
+        <Border
+             BackgroundColor="#b01d2e"
+             HeightRequest="40"
+             WidthRequest="40"
+             StrokeShape="RoundRectangle 55"
+             HorizontalOptions="End"
+             Margin="0,0,20,230">
+            <Label
+                 FontFamily="FontAwesome6" 
+                 Text="{x:Static Models:Icons.ClockRotateLeft}"
+                 FontSize="22"
+                 Margin="8,8,0,0"
+                 TextColor="#fbc5ca"/>
+        </Border>
         <Grid Margin="0,0,0,-150" Grid.Row="0">
             <VerticalStackLayout VerticalOptions="Center">
                 <Border BackgroundColor="#e58c8c"
@@ -25,7 +57,7 @@
                        HorizontalOptions="Start"
                        WidthRequest="394"
                        StrokeShape="RoundRectangle 35"
-                       Margin="0,0,0,100">
+                       Margin="0,0,0,60">
                     <Border.Shadow>
                         <Shadow
                             Brush="darkred"
@@ -35,9 +67,39 @@
                     </Border.Shadow>
                     <StackLayout HorizontalOptions="Center"
                                  Margin="5,25,5,5">
-                        <Label  Text="{Binding Source={x:Reference this}, Path=SelectedDate, StringFormat='{0: MMM dd yyyy}'}"
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontAttributes="Bold" Text="{Binding Source={x:Reference this}, Path=SelectedDate, StringFormat='{0: MMM dd yyyy}'}"
                                TextColor="#b01d2e"
                                FontSize="20"/>
+                            <HorizontalStackLayout Grid.Column="1" Spacing="20" HorizontalOptions="End">
+                                <Label
+                                    FontFamily="FontAwesome6" 
+                                    Text="{x:Static Models:Icons.AngleLeft}"
+                                    FontSize="25"
+                                    HeightRequest="25"
+                                    WidthRequest="25"
+                                    TextColor="#b01d2e">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=PreviousMonthCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label
+                                    FontFamily="FontAwesome6" 
+                                    Text="{x:Static Models:Icons.AngleRight}"
+                                    FontSize="25"
+                                    HeightRequest="25"
+                                    WidthRequest="25"
+                                    TextColor="#b01d2e">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=NextMonthCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </HorizontalStackLayout>
+                        </Grid>
                         <CollectionView ItemsSource="{Binding Source={x:Reference this}, Path= Dates}">
                             <CollectionView.ItemsLayout>
                                 <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
@@ -98,10 +160,10 @@
                 </Border>
             </VerticalStackLayout>
         </Grid>
-        <Grid Grid.Row="1" Margin="0,160,0,-20">
+        <Grid Grid.Row="1" Margin="0,70,0,0">
             <VerticalStackLayout>
                 <BoxView                    
-                     HeightRequest="350"
+                     HeightRequest="450"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"
                      WidthRequest="397"
@@ -111,10 +173,10 @@
                 </BoxView>
                 <Border 
                     Grid.Row="1"
-                    HeightRequest="60"
+                    HeightRequest="70"
                     WidthRequest="300"
                     StrokeShape="RoundRectangle 55"
-                    Margin="20,-330">
+                    Margin="20,-420">
                     <Border.Shadow>
                         <Shadow
                             Brush="gray"
@@ -125,7 +187,7 @@
                     <Button
                         BackgroundColor="#f4d7dc"
                         WidthRequest="300"
-                        HeightRequest="60"
+                        HeightRequest="70"
                         CornerRadius="55"
                         Text="Registro diario"
                         FontFamily="Verahb"
@@ -134,10 +196,10 @@
                 </Border>
                 <Border 
                     Grid.Row="1"
-                    HeightRequest="60"
+                    HeightRequest="70"
                     WidthRequest="300"
                     StrokeShape="RoundRectangle 55"
-                    Margin="0,350,0,10">
+                    Margin="0,440,0,10">
                     <Border.Shadow>
                         <Shadow
                             Brush="gray"
@@ -148,17 +210,16 @@
                     <Button
                         BackgroundColor="#f4d7dc"
                         WidthRequest="300"
-                        HeightRequest="60"
+                        HeightRequest="70"
                         CornerRadius="55"
                         Text="Registra tu ciclo"
                         FontFamily="Verahb"
                         FontSize="20"
                         TextColor="#b01d2e"/>
-                    
                 </Border>
                 <Border
                     Grid.Row="1"
-                    HeightRequest="60"
+                    HeightRequest="70"
                     WidthRequest="300"
                     StrokeShape="RoundRectangle 55"
                     Margin="0,10,0,0">
@@ -173,7 +234,7 @@
                     <Button
                         BackgroundColor="#f4d7dc"
                         WidthRequest="300"
-                        HeightRequest="60"
+                        HeightRequest="70"
                         CornerRadius="55"
                         Text="Tu salud sexual"
                         FontFamily="Verahb"
@@ -181,54 +242,52 @@
                         TextColor="#b01d2e"/>
                 </Border>
                 <VerticalStackLayout>
-                    <Frame
+                    <Border
                          Grid.Row="1"
                          BackgroundColor="#b01d2e"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         CornerRadius="50"
+                         HeightRequest="55"
+                         WidthRequest="55"
+                         StrokeShape="RoundRectangle 55"
                          HorizontalOptions="Start"
-                         Margin="55,-215,20,20">
-                    </Frame>
-                    <Frame
-                         Grid.Row="1"
-                         BackgroundColor="#b01d2e"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         CornerRadius="50"
-                         HorizontalOptions="Start"
-                        Margin="55,10,0,0">
-                    </Frame>
-                    <Frame
-                         Grid.Row="1"
-                         BackgroundColor="#b01d2e"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         CornerRadius="50"
-                         HorizontalOptions="Start"
-                        Margin="55,30,0,0">
-                    </Frame>
-                    <Label
+                         Margin="55,-242,20,20">
+                        <Label
                         FontFamily="FontAwesome6" 
                         Text="{x:Static Models:Icons.CalendarDays}"
                         FontSize="25"
-                        Margin="70,-200,20,20"
+                        Margin="15,13,0,0"
                         TextColor="#fbc5ca"/>
-                    <Label
+                    </Border>
+                    <Border
+                         Grid.Row="1"
+                         BackgroundColor="#b01d2e"
+                         HeightRequest="55"
+                         WidthRequest="55"
+                         StrokeShape="RoundRectangle 55"
+                         HorizontalOptions="Start"
+                        Margin="55,15,0,0">
+                        <Label
                         FontFamily="FontAwesome6" 
                         Text="{x:Static Models:Icons.Droplet}"
                         FontSize="25"
-                        Margin="70,35,20,20"
+                        Margin="16,13,0,0"
                         TextColor="#fbc5ca"/>
-                    <Label
+                    </Border>
+                    <Border
+                         Grid.Row="1"
+                         BackgroundColor="#b01d2e"
+                         HeightRequest="55"
+                         WidthRequest="55"
+                         StrokeShape="RoundRectangle 55"
+                         HorizontalOptions="Start"
+                         Margin="55,34,0,0">
+                        <Label
                         FontFamily="FontAwesome6" 
                         Text="{x:Static Models:Icons.Heart}"
                         FontSize="25"
-                        Margin="68,35,20,20"
+                        Margin="14,15,0,0"
                         TextColor="#fbc5ca"/>
+                    </Border>
                 </VerticalStackLayout>
-                
-
             </VerticalStackLayout>
         </Grid>
     </Grid>
