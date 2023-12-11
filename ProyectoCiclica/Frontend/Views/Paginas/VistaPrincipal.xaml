@@ -4,8 +4,9 @@
              xmlns:Models="clr-namespace:Frontend.Models"
              xmlns:simpleCore="clr-namespace:SimpleToolkit.Core;assembly=SimpleToolkit.Core"
              x:Class="Frontend.Views.VistaPrincipal"
-             xmlns:xc="clr-namespace:XCalendar.Maui.Views;assembly=XCalendar.Maui"
              xmlns:c="clr-namespace:Frontend.Views.Controles"
+             x:Name="this"
+             
              Shell.NavBarIsVisible="False"
              BackgroundColor="#b01d2e">
 
@@ -19,12 +20,12 @@
     <Grid RowDefinitions=".4*,.6*">
         <Grid Margin="0,0,0,-150" Grid.Row="0">
             <VerticalStackLayout VerticalOptions="Center">
-                <Border BackgroundColor="#fbc5ca"
-                       HeightRequest="450"
+                <Border BackgroundColor="#e58c8c"
+                       HeightRequest="200"
                        HorizontalOptions="Start"
-                       WidthRequest="343"
+                       WidthRequest="394"
                        StrokeShape="RoundRectangle 35"
-                       Margin="25,0,0,0">
+                       Margin="0,0,0,100">
                     <Border.Shadow>
                         <Shadow
                             Brush="darkred"
@@ -32,6 +33,68 @@
                             Opacity="1"
                             Offset="5,5"/>
                     </Border.Shadow>
+                    <StackLayout HorizontalOptions="Center"
+                                 Margin="5,25,5,5">
+                        <Label  Text="{Binding Source={x:Reference this}, Path=SelectedDate, StringFormat='{0: MMM dd yyyy}'}"
+                               TextColor="#b01d2e"
+                               FontSize="20"/>
+                        <CollectionView ItemsSource="{Binding Source={x:Reference this}, Path= Dates}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="Models:CalendarModel">
+                                    <Border WidthRequest="95" 
+                                        HeightRequest="95" 
+                                        StrokeShape="RoundRectangle 25" 
+                                        Padding="10"
+                                        BackgroundColor="#FBC5CA">
+                                        <Border.Shadow>
+                                            <Shadow
+                                         Brush="Gray"
+                                         Radius="3"
+                                         Opacity="1"
+                                         Offset="1, 5"/>
+                                        </Border.Shadow>
+                                        <VerticalStackLayout>
+                                            <Label Text="{Binding Date, StringFormat='{0:ddd}'}" 
+                                               FontSize="18" 
+                                               TextColor="#b01d2e"
+                                               HorizontalTextAlignment="Center">
+                                                <Label.Triggers>
+                                                    <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
+                                                        <Setter Property="TextColor" Value="#f4d7dc"/>
+                                                    </DataTrigger>
+                                                </Label.Triggers>
+                                            </Label>
+                                            <Label Text="{Binding Date, StringFormat='{0:dd}'}" 
+                                               FontSize="20" 
+                                               TextColor="#b01d2e"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center">
+                                                <Label.Triggers>
+                                                    <DataTrigger TargetType="Label" Binding="{Binding IsCurrentDate}" Value="True">
+                                                        <Setter Property="TextColor" Value="#f4d7dc"/>
+                                                    </DataTrigger>
+                                                </Label.Triggers>
+                                            </Label>
+                                        </VerticalStackLayout>
+                                        <Border.Triggers>
+                                            <DataTrigger TargetType="Border" Binding="{Binding IsCurrentDate}" Value="true">
+                                                <Setter Property="BackgroundColor" Value="#b01d2e"/>
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Border" Binding="{Binding IsCurrentDate}" Value="false">
+                                                <Setter Property="BackgroundColor" Value="#FBC5CA"/>
+                                            </DataTrigger>
+                                        </Border.Triggers>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path= CurrentDateCommand}" CommandParameter="{Binding .}"/>
+                                        </Border.GestureRecognizers>
+                                    </Border>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
                 </Border>
             </VerticalStackLayout>
         </Grid>
@@ -91,6 +154,7 @@
                         FontFamily="Verahb"
                         FontSize="20"
                         TextColor="#b01d2e"/>
+                    
                 </Border>
                 <Border
                     Grid.Row="1"
@@ -115,7 +179,6 @@
                         FontFamily="Verahb"
                         FontSize="20"
                         TextColor="#b01d2e"/>
-                    
                 </Border>
                 <VerticalStackLayout>
                     <Frame
