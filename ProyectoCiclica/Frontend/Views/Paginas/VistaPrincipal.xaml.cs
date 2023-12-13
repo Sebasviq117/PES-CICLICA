@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Windows.Input;
 using Frontend.Models;
+using Frontend.Views.Paginas;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Frontend.Views;
@@ -95,4 +96,24 @@ public partial class VistaPrincipal : ContentPage
     });
 
     #endregion
+
+    private void BTN_RegistroDiario_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegCiclica());
+    }
+
+    private void BTN_RegistroCiclo_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegCiclica());
+    }
+
+    private void BTN_SaludSexual_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new MetodosAnticonceptivos());
+    }
+
+    private void BTN_HistorialCicloMenstual_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegCiclica());
+    }
 }

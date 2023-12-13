@@ -11,7 +11,6 @@ namespace Frontend
             InitializeComponent();
 
             AddTab(typeof(VistaPrincipal), PageType.VistaPrincipal);
-
             AddTab(typeof(TiendaCiclica), PageType.TiendaCiclica);
             AddTab(typeof(PerfilUsuario), PageType.PerfilUsuario);
 

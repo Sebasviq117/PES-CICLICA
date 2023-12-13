@@ -46,11 +46,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = Frontend.Views.Controles.T
 build_metadata.AdditionalFiles.TargetPath = Views\Controles\TabBarView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Controles\TabBarView.xaml
 
+[C:/Users/sebas/OneDrive/Escritorio/PES CICLICA/ProyectoCiclica/Frontend/Views/Paginas/AnticoncepFechaYHora.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Frontend.Views.Paginas.AnticoncepFechaYHora.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Paginas\AnticoncepFechaYHora.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Paginas\AnticoncepFechaYHora.xaml
+
 [C:/Users/sebas/OneDrive/Escritorio/PES CICLICA/ProyectoCiclica/Frontend/Views/Paginas/LogCiclica.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Frontend.Views.Paginas.LogCiclica.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Paginas\LogCiclica.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Paginas\LogCiclica.xaml
+
+[C:/Users/sebas/OneDrive/Escritorio/PES CICLICA/ProyectoCiclica/Frontend/Views/Paginas/MetodosAnticonceptivos.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Frontend.Views.Paginas.MetodosAnticonceptivos.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Paginas\MetodosAnticonceptivos.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Paginas\MetodosAnticonceptivos.xaml
 
 [C:/Users/sebas/OneDrive/Escritorio/PES CICLICA/ProyectoCiclica/Frontend/Views/Paginas/PerfilUsuario.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

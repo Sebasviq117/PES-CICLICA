@@ -25,7 +25,7 @@
             <Rectangle
             x:Name="bottomBackgroundRectangle"
             Background="{StaticResource Primary}"
-            VerticalOptions="End"/>
+            VerticalOptions="EndAndExpand"/>
         </Grid>
     </simpleShell:SimpleShell.RootPageContainer>
 

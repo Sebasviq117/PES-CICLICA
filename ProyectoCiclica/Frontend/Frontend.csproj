@@ -57,12 +57,18 @@
 	  <None Remove="Resources\Fonts\Verahi__.ttf" />
 	  <None Remove="Resources\Fonts\Verah___.ttf" />
 	  <None Remove="Resources\Fonts\windows_command_prompt.ttf" />
+	  <None Remove="Resources\Images\anillo.png" />
 	  <None Remove="Resources\Images\calendario.png" />
+	  <None Remove="Resources\Images\diu.png" />
+	  <None Remove="Resources\Images\implante.png" />
+	  <None Remove="Resources\Images\inyeccion.png" />
 	  <None Remove="Resources\Images\logored.png" />
 	  <None Remove="Resources\Images\logo_ciclica.jpg" />
 	  <None Remove="Resources\Images\logo_ciclica2.png" />
 	  <None Remove="Resources\Images\logo_vag_red.png" />
 	  <None Remove="Resources\Images\logo_vag_red2.png" />
+	  <None Remove="Resources\Images\parche.png" />
+	  <None Remove="Resources\Images\pastillas_anticonceptivas.png" />
 	  <None Remove="Resources\Images\tienda.png" />
 	  <None Remove="Resources\Images\tiendanav.png" />
 	  <None Remove="Resources\Images\usuario.png" />
@@ -89,7 +95,13 @@
 	  <MauiXaml Update="Views\Controles\TabBarView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\AnticoncepFechaYHora.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Paginas\LogCiclica.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\MetodosAnticonceptivos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Paginas\PerfilUsuario.xaml">

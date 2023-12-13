@@ -34,7 +34,9 @@
                 BackgroundColor="#e58c8c"
                 WidthRequest="60"
                 HeightRequest="50"
-                CornerRadius="55"/>
+                CornerRadius="55"
+                x:Name="BTN_HistorialCicloMenstual"
+                Clicked="BTN_HistorialCicloMenstual_Clicked"/>
         </Border>
         <Border
              BackgroundColor="#b01d2e"
@@ -55,7 +57,7 @@
                 <Border BackgroundColor="#e58c8c"
                        HeightRequest="200"
                        HorizontalOptions="Start"
-                       WidthRequest="394"
+                       WidthRequest="410"
                        StrokeShape="RoundRectangle 35"
                        Margin="0,0,0,60">
                     <Border.Shadow>
@@ -189,6 +191,8 @@
                         WidthRequest="300"
                         HeightRequest="70"
                         CornerRadius="55"
+                        x:Name="BTN_RegistroDiario"
+                        Clicked="BTN_RegistroDiario_Clicked"
                         Text="Registro diario"
                         FontFamily="Verahb"
                         FontSize="20"
@@ -212,6 +216,8 @@
                         WidthRequest="300"
                         HeightRequest="70"
                         CornerRadius="55"
+                        x:Name="BTN_RegistroCiclo"
+                        Clicked="BTN_RegistroCiclo_Clicked"
                         Text="Registra tu ciclo"
                         FontFamily="Verahb"
                         FontSize="20"
@@ -236,6 +242,8 @@
                         WidthRequest="300"
                         HeightRequest="70"
                         CornerRadius="55"
+                        x:Name="BTN_SaludSexual"
+                        Clicked="BTN_SaludSexual_Clicked"
                         Text="Tu salud sexual"
                         FontFamily="Verahb"
                         FontSize="20"
@@ -249,7 +257,7 @@
                          WidthRequest="55"
                          StrokeShape="RoundRectangle 55"
                          HorizontalOptions="Start"
-                         Margin="55,-242,20,20">
+                         Margin="65,-242,20,20">
                         <Label
                         FontFamily="FontAwesome6" 
                         Text="{x:Static Models:Icons.CalendarDays}"
@@ -264,7 +272,7 @@
                          WidthRequest="55"
                          StrokeShape="RoundRectangle 55"
                          HorizontalOptions="Start"
-                        Margin="55,15,0,0">
+                        Margin="65,15,0,0">
                         <Label
                         FontFamily="FontAwesome6" 
                         Text="{x:Static Models:Icons.Droplet}"
@@ -279,7 +287,7 @@
                          WidthRequest="55"
                          StrokeShape="RoundRectangle 55"
                          HorizontalOptions="Start"
-                         Margin="55,34,0,0">
+                         Margin="65,34,0,0">
                         <Label
                         FontFamily="FontAwesome6" 
                         Text="{x:Static Models:Icons.Heart}"

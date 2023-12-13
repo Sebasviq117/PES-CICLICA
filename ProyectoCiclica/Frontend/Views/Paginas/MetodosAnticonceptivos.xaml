@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Frontend.Views.Paginas.MetodosAnticonceptivos"
+             xmlns:Models="clr-namespace:Frontend.Models"
+             xmlns:c="clr-namespace:Frontend.Views.Controles"
+             xmlns:simpleCore="clr-namespace:SimpleToolkit.Core;assembly=SimpleToolkit.Core"
+             BackgroundColor="#FBC5CA">
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto, auto, *">
+            <Grid HeightRequest="50"
+                  ColumnDefinitions="auto, *, auto">
+                <Button 
+                    x:Name="BTN_RegresarDeAnticonceptivos"
+                    Clicked="BTN_RegresarDeAnticonceptivos_Clicked"
+                    FontFamily="FontAwesome6" 
+                    Text="{x:Static Models:Icons.ArrowLeft}"
+                    FontSize="36"
+                    TextColor="#f4d7dc"
+                    Margin="15,-75,0,0"
+                    BackgroundColor="Transparent">
+                    <Button.Shadow>
+                        <Shadow Brush="gray"
+                                Radius="10"
+                                Opacity="1"
+                                Offset="1,6"/>
+                    </Button.Shadow>
+                </Button>
+            </Grid>
+            <Label Text="Elige tu metodo anticonceptivo"
+               Margin="80,130,0,0"
+               TextColor="#b01d2e"
+               FontSize="36"
+               FontFamily="Verahb"/>
+            <Grid RowDefinitions="auto, auto, auto, auto"
+                  ColumnDefinitions="auto, auto"
+                  Margin="30,230,0,-650">
+                <Grid Grid.Column="0"
+                      Grid.Row="0"
+                      Margin="20">
+                    <Label Text="Pastillas anticonceptivas"
+                           TextColor="#b01d2e"
+                           FontFamily="verah"
+                           FontSize="15"
+                           Margin="-23"
+                           HorizontalOptions="Center" VerticalOptions="Start"/>
+                    <ImageButton 
+                        HeightRequest="120" WidthRequest="120"
+                        CornerRadius="15"
+                        x:Name="BTN_PastillasAnticonceptivas"
+                        Source="pastillas_anticonceptivas.png"
+                        HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton.Shadow>
+                            <Shadow Brush="gray"
+                                Radius="10"
+                                Opacity="1"
+                                Offset="0,6"/>
+                        </ImageButton.Shadow>
+                    </ImageButton>
+                </Grid>
+
+                <Grid Grid.Column="1"
+                      Grid.Row="0"
+                      Margin="0">
+                    <Label Text="Inyeccion"
+                           TextColor="#b01d2e"
+                           FontFamily="verah"
+                           FontSize="15"
+                           Margin="-2"
+                           HorizontalOptions="Center" VerticalOptions="Start"/>
+                    <ImageButton 
+                            HeightRequest="120" WidthRequest="120"
+                            CornerRadius="15"
+                            x:Name="BTN_Inyeccion"
+                            Source="inyeccion.png"
+                            HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton.Shadow>
+                            <Shadow Brush="gray"
+                                Radius="10"
+                                Opacity="1"
+                                Offset="0,6"/>
+                        </ImageButton.Shadow>
+                    </ImageButton>
+                </Grid>
+
+                <Grid Grid.Column="0"
+                      Grid.Row="1"
+                      Margin="0">
+                    <Label Text="DIU"
+                           TextColor="#b01d2e"
+                           FontFamily="verah"
+                           FontSize="15"
+                           Margin="10"
+                           HorizontalOptions="Center" VerticalOptions="Start"/>
+                    <ImageButton 
+                        HeightRequest="120" WidthRequest="120"
+                        CornerRadius="15"
+                        x:Name="BTN_Diu"
+                        Source="diu.png"
+                        HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton.Shadow>
+                            <Shadow Brush="gray"
+                                Radius="10"
+                                Opacity="1"
+                                Offset="0,6"/>
+                        </ImageButton.Shadow>
+                    </ImageButton>
+                </Grid>
+
+                <Grid Grid.Column="1"
+                      Grid.Row="1"
+                      Margin="30">
+                    <Label Text="Parche"
+                           TextColor="#b01d2e"
+                           FontFamily="verah"
+                           FontSize="15"
+                           Margin="-23"
+                           HorizontalOptions="Center" VerticalOptions="Start"/>
+                    <ImageButton 
+                        HeightRequest="120" WidthRequest="120"
+                        CornerRadius="15"
+                        x:Name="BTN_Parche"
+                        Source="parche.png"
+                        HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton.Shadow>
+                            <Shadow Brush="gray"
+                                Radius="10"
+                                Opacity="1"
+                                Offset="0,6"/>
+                        </ImageButton.Shadow>
+                    </ImageButton>
+                </Grid>
+
+                <Grid Grid.Column="0"
+                      Grid.Row="2"
+                      Margin="0">
+                    <Label Text="Implante"
+                           TextColor="#b01d2e"
+                           FontFamily="verah"
+                           FontSize="15"
+                           Margin="-2"
+                           HorizontalOptions="Center" VerticalOptions="Start"/>
+                    <ImageButton 
+                        HeightRequest="120" WidthRequest="120"
+                        CornerRadius="15"
+                        x:Name="BTN_Implante"
+                        Source="implante.png"
+                        HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton.Shadow>
+                            <Shadow Brush="gray"
+                            Radius="10"
+                            Opacity="1"
+                            Offset="0,6"/>
+                        </ImageButton.Shadow>
+                    </ImageButton>
+                </Grid>
+
+                <Grid Grid.Column="1"
+                      Grid.Row="2"
+                      Margin="20">
+                    <Label Text="Anillo"
+                           TextColor="#b01d2e"
+                           FontFamily="verah"
+                           FontSize="15"
+                           Margin="-23"
+                           HorizontalOptions="Center" VerticalOptions="Start"/>
+                    <ImageButton 
+                        HeightRequest="120" WidthRequest="120"
+                        CornerRadius="15"
+                        x:Name="BTN_Anillo"
+                        Clicked="BTN_Anillo_Clicked"
+                        Source="anillo.png"
+                        HorizontalOptions="Center" VerticalOptions="Center">
+                        <ImageButton.Shadow>
+                            <Shadow Brush="gray"
+                            Radius="10"
+                            Opacity="1"
+                            Offset="0,6"/>
+                        </ImageButton.Shadow>
+                    </ImageButton>
+                </Grid>
+            </Grid>
+            <Button 
+                HeightRequest="45" WidthRequest="150"
+                BackgroundColor="#E58C8C"
+                CornerRadius="15"
+                Margin="500,750,500,-580"
+                x:Name="BTN_HistorialAnticonceptivo"
+                HorizontalOptions="Center" VerticalOptions="Center">
+                <Button.Shadow>
+                    <Shadow Brush="gray"
+                        Radius="10"
+                        Opacity="1"
+                        Offset="0,6"/>
+                </Button.Shadow>
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

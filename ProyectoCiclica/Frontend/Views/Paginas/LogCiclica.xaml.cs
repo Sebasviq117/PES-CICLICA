@@ -1,3 +1,4 @@
+using Frontend.CapturarDatos;
 using Frontend.Entidades;
 using Newtonsoft.Json;
 using System.Text;
@@ -42,6 +43,7 @@ public partial class LogCiclica : ContentPage
                 resLoginUsuario = JsonConvert.DeserializeObject<ResLoginUsuario>(responseContent);
                 if (resLoginUsuario.resultado)
                 {
+                    ObtenerDatosAEnviar.Session = resLoginUsuario.session;
                     // En LogCiclica después de la autenticación exitosa
                     Application.Current.MainPage = new AppShell();
 

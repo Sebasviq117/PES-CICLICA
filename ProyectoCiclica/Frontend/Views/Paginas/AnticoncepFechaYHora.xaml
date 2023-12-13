@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Frontend.Views.Paginas.AnticoncepFechaYHora"
+             Title="AnticoncepFechaYHora">
+    <VerticalStackLayout>
+        <Grid>
+            <Button x:Name="BTN_GuardarAnticoncep"
+            Clicked="BTN_GuardarAnticoncep_Clicked"
+            Text="Guardar"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
