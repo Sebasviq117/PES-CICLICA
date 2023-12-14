@@ -11,5 +11,6 @@ namespace Frontend.Entidades
         public int Anti_Concep_ID { get; set; }
         public string Anti_Concep_Nombre { get; set; }
         public string Anti_Concep_Efectividad { get; set; }
+        public string Anti_Concep_Imagen { get; set; }
     }
 }

@@ -8,7 +8,16 @@ namespace Frontend.Views.Paginas;
 
 public partial class MetodosAnticonceptivos : ContentPage
 {
-	public MetodosAnticonceptivos()
+    public List<Anticonceptivos> ListaAnticonceptivos { get; set; } = new List<Anticonceptivos>
+    {
+        new Anticonceptivos { Anti_Concep_ID = 1, Anti_Concep_Nombre = "Pastillas anticonceptivas", Anti_Concep_Imagen = "pastillas_anticonceptivas.png" },
+        new Anticonceptivos { Anti_Concep_ID = 2, Anti_Concep_Nombre = "Inyeccion", Anti_Concep_Imagen = "inyeccion.png" },
+        new Anticonceptivos { Anti_Concep_ID = 3, Anti_Concep_Nombre = "DIU", Anti_Concep_Imagen = "diu.png" },
+        new Anticonceptivos { Anti_Concep_ID = 4, Anti_Concep_Nombre = "Parche", Anti_Concep_Imagen = "parche.png" },
+        new Anticonceptivos { Anti_Concep_ID = 5, Anti_Concep_Nombre = "Implante", Anti_Concep_Imagen = "implante.png" },
+        new Anticonceptivos { Anti_Concep_ID = 6, Anti_Concep_Nombre = "Anillo", Anti_Concep_Imagen = "anillo.png" },
+    };
+    public MetodosAnticonceptivos()
 	{
 		InitializeComponent();
 	}
@@ -19,11 +28,13 @@ public partial class MetodosAnticonceptivos : ContentPage
 
     private void BTN_PastillasAnticonceptivas_Clicked(object sender, EventArgs e)
     {
-        // Asigna un valor entero al ImageButton
-        int valor = 1;
+        var clickedButton = (ImageButton)sender;
+        int anticonceptivoId = 1;
+        var anticonceptivo = ListaAnticonceptivos.FirstOrDefault(a => a.Anti_Concep_ID == anticonceptivoId);
 
-        // Almacena el valor en la clase estática
-        ObtenerDatosAEnviar.IdAnticoncep = valor;
+        // Almacena el ID y la ruta de la imagen en las variables globales
+        ObtenerDatosAEnviar.IdAnticoncep = anticonceptivo.Anti_Concep_ID;
+        ObtenerDatosAEnviar.ImagenAnticoncep = anticonceptivo.Anti_Concep_Imagen;
 
         // Continua con el registro
         Navigation.PushAsync(new AnticoncepFechaYHora());
