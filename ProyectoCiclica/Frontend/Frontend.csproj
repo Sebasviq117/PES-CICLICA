@@ -104,6 +104,12 @@
 	  <MauiXaml Update="Views\Paginas\MetodosAnticonceptivos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\PagHistorialAnticoncep.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\PagObtenerElMetodoAnticoncepEnUso.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Paginas\PerfilUsuario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

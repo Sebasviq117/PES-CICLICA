@@ -1,4 +1,5 @@
 ﻿using Frontend.Views;
+using Frontend.Views.Paginas;
 
 namespace Frontend
 {
@@ -9,7 +10,7 @@ namespace Frontend
             InitializeComponent();
 
             //MainPage = new NavigationPage(new LogCiclica());
-            MainPage = new AppShell();
+            MainPage = new PagHistorialAnticoncep();
         }
     }
 }

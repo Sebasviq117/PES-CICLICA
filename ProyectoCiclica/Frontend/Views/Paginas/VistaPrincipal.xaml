@@ -162,6 +162,44 @@
                 </Border>
             </VerticalStackLayout>
         </Grid>
+        <StackLayout x:Name="PestañaConsejos"
+            Margin="0,180,0,0"
+                     WidthRequest="325"
+                     HeightRequest="200"
+                     HorizontalOptions="End">
+            <Grid 
+                WidthRequest="325"
+                HeightRequest="200"
+                BackgroundColor="Transparent"
+                HorizontalOptions="End"
+                VerticalOptions="Center">
+                <Border
+                    StrokeShape="RoundRectangle 28,0,28,0"
+                    BackgroundColor="#FBC5CA">
+                    <Label
+                        Text="Aqui va el texto que viene del metodo mostar consejos"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Start"
+                        TextColor="#b01d2e"
+                        FontFamily="verah"
+                        FontSize="14"
+                        Margin="0,5,0,0"/>
+                </Border>
+                <Button x:Name="BTN_OcultarConsejo"
+                    Clicked="BTN_OcultarConsejo_Clicked"
+                    WidthRequest="120"
+                    HeightRequest="50"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    CornerRadius="25"
+                    Text="Aceptar"
+                    TextColor="#f4d7dc"
+                    FontFamily="verah"
+                    FontAttributes="Bold"
+                    FontSize="24"/>
+            </Grid>
+        </StackLayout>
         <Grid Grid.Row="1" Margin="0,70,0,0">
             <VerticalStackLayout>
                 <BoxView                    

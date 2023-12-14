@@ -38,6 +38,12 @@
     <MauiXaml Update="Views\Paginas\MetodosAnticonceptivos.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Paginas\PagHistorialAnticoncep.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Paginas\PagObtenerElMetodoAnticoncepEnUso.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Paginas\PerfilUsuario.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

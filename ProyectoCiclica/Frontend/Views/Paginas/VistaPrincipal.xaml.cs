@@ -4,6 +4,8 @@ using System.Windows.Input;
 using Frontend.Models;
 using Frontend.Views.Paginas;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using SimpleToolkit.Core;
+using SimpleToolkit.SimpleShell;
 
 namespace Frontend.Views;
 
@@ -115,5 +117,10 @@ public partial class VistaPrincipal : ContentPage
     private void BTN_HistorialCicloMenstual_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new RegCiclica());
+    }
+
+    private void BTN_OcultarConsejo_Clicked(object sender, EventArgs e)
+    {
+        PestañaConsejos.IsVisible = false;
     }
 }

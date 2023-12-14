@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Frontend.Views.Paginas.PagHistorialAnticoncep"
+             xmlns:Models="clr-namespace:Frontend.Models"
+             BackgroundColor="#FBC5CA">
+
+    <Grid RowDefinitions="auto,auto,auto">
+        <Grid Grid.Row="0"
+              Margin="10,30,0,0"
+              WidthRequest="60"
+              HeightRequest="60"
+              VerticalOptions="Start"
+              HorizontalOptions="Start">
+            <Button 
+                x:Name="BTN_RegresarDeHistorial"
+                Clicked="BTN_RegresarDeHistorial_Clicked"
+                WidthRequest="60"
+                HeightRequest="60"
+                FontFamily="FontAwesome6" 
+                Text="{x:Static Models:Icons.ArrowLeft}"
+                FontSize="36"
+                TextColor="#f4d7dc"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                BackgroundColor="Transparent">
+                <Button.Shadow>
+                    <Shadow Brush="gray"
+                        Radius="10"
+                        Opacity="1"
+                        Offset="1,6"/>
+                </Button.Shadow>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1"
+              BackgroundColor="Transparent"
+              WidthRequest="300"
+              HeightRequest="80">
+            <Label
+                Text="Historial de anticonceptivos"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                TextColor="#b01d2e"
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Bold"
+                FontFamily="verah"/>
+        </Grid>
+        <Grid Grid.Row="2"
+              BackgroundColor="Red"
+              WidthRequest="350"
+              HeightRequest="200"
+              Margin="20">
+            <ScrollView x:Name="ScrollHistorialAnticoncep">
+                <Frame
+                    CornerRadius="30">
+                    
+                </Frame>
+            </ScrollView>
+        </Grid>
+    </Grid>
+    
+</ContentPage>

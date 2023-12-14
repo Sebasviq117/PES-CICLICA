@@ -10,5 +10,8 @@ namespace Frontend.CapturarDatos
    public static class ObtenerDatosAEnviar
     {
         public static string Session { get; set; }
+        public static int IdAnticoncep { get; set; }
+        public static string NombreAnticoncep { get; set; }
+
     }
 }
