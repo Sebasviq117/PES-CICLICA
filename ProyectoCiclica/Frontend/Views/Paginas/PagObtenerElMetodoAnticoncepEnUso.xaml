@@ -16,6 +16,7 @@
                   Background="Transparent">
                 <Button 
                     x:Name="BTN_RegresarDelMetodoEnUso"
+                    Clicked="BTN_RegresarDelMetodoEnUso_Clicked"
                     WidthRequest="60"
                     HeightRequest="60"
                     FontFamily="FontAwesome6" 
@@ -110,11 +111,14 @@
                         <Shadow/>
                     </Border.Shadow>
                 </Border>
-                <Button Text="Suspender"
-                        WidthRequest="100"
-                        HeightRequest="45"
-                        VerticalOptions="End"
-                            Margin="20"/>
+                <Button 
+                    x:Name="BTN_SuspenderMetodo"
+                    Clicked="BTN_SuspenderMetodo_Clicked"
+                    Text="Suspender"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    VerticalOptions="End"
+                    Margin="20"/>
 
             </Grid>
         </Grid>

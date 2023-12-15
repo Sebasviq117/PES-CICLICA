@@ -139,6 +139,13 @@
                                     FontAttributes="Bold"/>
                             </Grid>
                         </Grid>
+                        <Border.Shadow>
+                            <Shadow  
+                                Brush="gray"
+                                Radius="5"
+                                Opacity="1"
+                                Offset="1,5"/>
+                        </Border.Shadow>
                     </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

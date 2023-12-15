@@ -188,7 +188,7 @@
                 <Button x:Name="BTN_OcultarConsejo"
                     Clicked="BTN_OcultarConsejo_Clicked"
                     WidthRequest="120"
-                    HeightRequest="50"
+                    HeightRequest="55"
                     Margin="0,0,0,10"
                     HorizontalOptions="Center"
                     VerticalOptions="End"
@@ -197,6 +197,7 @@
                     TextColor="#f4d7dc"
                     FontFamily="verah"
                     FontAttributes="Bold"
+                    BackgroundColor="#b01d2e"
                     FontSize="24"/>
             </Grid>
         </StackLayout>

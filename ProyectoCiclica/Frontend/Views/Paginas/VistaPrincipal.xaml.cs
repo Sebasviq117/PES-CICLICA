@@ -3,14 +3,22 @@ using System.Globalization;
 using System.Windows.Input;
 using Frontend.Models;
 using Frontend.Views.Paginas;
+using Frontend.Entidades;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using SimpleToolkit.Core;
 using SimpleToolkit.SimpleShell;
+using Frontend.CapturarDatos;
+using Newtonsoft.Json;
+using System.Text;
+using Xamarin.Google.Crypto.Tink.Shaded.Protobuf;
+using System.Collections.Generic;
 
 namespace Frontend.Views;
 
 public partial class VistaPrincipal : ContentPage
 {
+    string api = "https://webapiciclica.azurewebsites.net/api/";
+
     #region BindableProperty
     public static readonly BindableProperty SelectedDateProperty = BindableProperty.Create(
         nameof(SelectedDate),
@@ -99,6 +107,7 @@ public partial class VistaPrincipal : ContentPage
 
     #endregion
 
+    public List<Anticonceptivos> ListaAnticonceptivos { get; set; }
     private void BTN_RegistroDiario_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new RegCiclica());
@@ -109,14 +118,57 @@ public partial class VistaPrincipal : ContentPage
         Navigation.PushAsync(new RegCiclica());
     }
 
-    private void BTN_SaludSexual_Clicked(object sender, EventArgs e)
+    private async Task BTN_SaludSexual_ClickedAsync(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new MetodosAnticonceptivos());
+        try
+        {
+            // Crear la solicitud para la API
+            ReqObtenerAnticonceptivos req = new ReqObtenerAnticonceptivos
+            {
+                 // Ajusta esto según tus necesidades
+            };
+
+            // Crear una instancia del cliente de la API
+            var jsonContent = new StringContent(JsonConvert.SerializeObject(ObtenerDatosAEnviar.Session), Encoding.UTF8, "application/json");
+            HttpClient httpClient = new HttpClient();
+
+            // Llamar al método de la API y esperar la respuesta
+            var response = await httpClient.PostAsync(api + "Anticonceptivos/obtenerAnticonceptivos", jsonContent);
+
+            // Verificar el resultado de la API
+            if (response.IsSuccessStatusCode)
+            {
+                ResObtenerAnticonceptivos resObtenerAnticonceptivos = new ResObtenerAnticonceptivos();
+                var responseContent = await response.Content.ReadAsStringAsync();
+                resObtenerAnticonceptivos = JsonConvert.DeserializeObject<ResObtenerAnticonceptivos>(responseContent);
+                if (resObtenerAnticonceptivos.errorCode == 0)
+                {
+                    ObtenerDatosAEnviar.Session = resLoginUsuario.session;
+                    ListaDeAnticoncepDatos = resLoginUsuario.ListaDeAnticoncepDatos;
+
+                    // Enlaza la lista al ListView u otro control en tu interfaz de usuario
+                    TuListView.ItemsSource = ListaDeAnticoncepDatos;
+                    await Navigation.PushAsync(new MetodosAnticonceptivos());
+                }
+                
+            }
+            else
+            {
+                // La llamada a la API no fue exitosa, puedes manejar el error según tus necesidades
+                await DisplayAlert("Advertencia", "Correo y contraseña incorrectos", "Ok");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier excepción inesperada
+            Console.WriteLine($"Error: {ex.Message}");
+            await DisplayAlert("Error", "Error interno", "OK");
+        }
+
     }
 
     private void BTN_HistorialCicloMenstual_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new RegCiclica());
     }
 
     private void BTN_OcultarConsejo_Clicked(object sender, EventArgs e)

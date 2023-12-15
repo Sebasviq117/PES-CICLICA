@@ -103,24 +103,27 @@
                        HeightRequest="163"
                        WidthRequest="280"
                        HasShadow="True"
-                       CornerRadius="28">
+                       CornerRadius="28" 
+                       BorderColor="#F4D7DC">
                     <Grid Grid.Column="0">
-                            <Frame BorderColor="#b01d2e"
+                        <Frame BorderColor="#b01d2e"
                                    BackgroundColor="Transparent"
-                                   Margin="0,0,0,0">
-                                <TimePicker 
+                                   Margin="0,0,1,0">
+                            <TimePicker 
                                     Time="20:00"
                                     x:Name="TimePicker_Hora"
                                     TextColor="#b01d2e"
                                     Format="hh : mm"
-                                    FontSize="60"/>
-                            </Frame>
-                        </Grid>
+                                    FontSize="60"
+                                HeightRequest="100"
+                                WidthRequest="220"/>
+                        </Frame>
+                    </Grid>
                 </Frame>
                 <Grid Grid.Row="3">
                     <Border Margin="20,250,20,0"
-                            WidthRequest="110"
-                            HeightRequest="50"
+                            WidthRequest="130"
+                            HeightRequest="55"
                             StrokeShape="RoundRectangle 30">
                         <Button
                             Text="Guardar"
@@ -130,12 +133,12 @@
                             TextColor="#b01d2e"
                             FontSize="20"
                             CornerRadius="25"
-                            Margin="0,0,0,0"/>
+                            Margin="0,0,0,0"
+                            BorderColor="#E58C8C"/>
                     </Border>
                 </Grid>
             </Grid>
-            <!-- Texto "Seleccione la hora para recibir tu recordatorio" -->
-            
+
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
