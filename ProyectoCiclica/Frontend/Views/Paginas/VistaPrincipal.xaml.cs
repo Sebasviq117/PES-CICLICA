@@ -10,7 +10,6 @@ using SimpleToolkit.SimpleShell;
 using Frontend.CapturarDatos;
 using Newtonsoft.Json;
 using System.Text;
-using Xamarin.Google.Crypto.Tink.Shaded.Protobuf;
 using System.Collections.Generic;
 
 namespace Frontend.Views;
@@ -107,20 +106,18 @@ public partial class VistaPrincipal : ContentPage
 
     #endregion
 
-    public List<Anticonceptivos> ListaAnticonceptivos { get; set; }
     private void BTN_RegistroDiario_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new RegCiclica());
+       
     }
 
     private void BTN_RegistroCiclo_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new RegCiclica());
+       
     }
-
-    private async Task BTN_SaludSexual_ClickedAsync(object sender, EventArgs e)
+    private /*async*/ void BTN_SaludSexual_Clicked(object sender, EventArgs e)
     {
-        try
+        /*try
         {
             // Crear la solicitud para la API
             ReqObtenerAnticonceptivos req = new ReqObtenerAnticonceptivos
@@ -143,11 +140,8 @@ public partial class VistaPrincipal : ContentPage
                 resObtenerAnticonceptivos = JsonConvert.DeserializeObject<ResObtenerAnticonceptivos>(responseContent);
                 if (resObtenerAnticonceptivos.errorCode == 0)
                 {
-                    ObtenerDatosAEnviar.Session = resLoginUsuario.session;
-                    ListaDeAnticoncepDatos = resLoginUsuario.ListaDeAnticoncepDatos;
 
-                    // Enlaza la lista al ListView u otro control en tu interfaz de usuario
-                    TuListView.ItemsSource = ListaDeAnticoncepDatos;
+                    ObtenerDatosAEnviar.anticonceptivos = resObtenerAnticonceptivos.ListaDeAnticoncepDatos;
                     await Navigation.PushAsync(new MetodosAnticonceptivos());
                 }
                 
@@ -163,7 +157,8 @@ public partial class VistaPrincipal : ContentPage
             // Manejar cualquier excepción inesperada
             Console.WriteLine($"Error: {ex.Message}");
             await DisplayAlert("Error", "Error interno", "OK");
-        }
+        }*/
+        Navigation.PushAsync(new MetodosAnticonceptivos());
 
     }
 

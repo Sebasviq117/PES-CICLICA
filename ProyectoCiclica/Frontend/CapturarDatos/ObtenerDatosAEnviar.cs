@@ -13,5 +13,7 @@ namespace Frontend.CapturarDatos
         public static int IdAnticoncep { get; set; }
         public static string NombreAnticoncep { get; set; }
         public static string ImagenAnticoncep { get; set; }
+        public static List<Anticonceptivos> anticonceptivos { get; set; }
+        public static string Anti_Concep_Imagen { get; set; }
     }
 }
