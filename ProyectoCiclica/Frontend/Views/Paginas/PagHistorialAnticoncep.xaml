@@ -44,14 +44,14 @@
                 FontSize="30"
                 HorizontalTextAlignment="Center"
                 FontAttributes="Bold"
-                FontFamily="verah"/>
+                FontFamily="Verah"/>
         </Grid>
         <!--Lista del Historial-->
         <CollectionView Grid.Row="2"
                     Margin="10"
                     WidthRequest="350"
                     HeightRequest="620"
-                        ItemsSource="{Binding listaHistorials}">
+                    ItemsSource="{Binding listaHistorials}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Border StrokeShape="RoundRectangle 25"

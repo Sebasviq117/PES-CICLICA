@@ -15,6 +15,6 @@ namespace Frontend.CapturarDatos
         public static string ImagenAnticoncep { get; set; }
         public static List<Anticonceptivos> anticonceptivos { get; set; }
         public static List<Notifi_Anticonceptivos> historialAnticoncep { get; set; }
-        public static string Anti_Concep_Imagen { get; set; }
+        public static List<Consejos> consejos { get; set; }
     }
 }

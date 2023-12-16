@@ -1,5 +1,6 @@
 using Frontend.CapturarDatos;
 using Frontend.Entidades;
+using Frontend.Views.Paginas;
 using Newtonsoft.Json;
 using System.Text;
 using System.Text.Json;
@@ -35,7 +36,7 @@ public partial class LogCiclica : ContentPage
             reqLoginUsuario.userLog.contrasena = LoginContraseña.Text;
             var jsonContent = new StringContent(JsonConvert.SerializeObject(reqLoginUsuario), Encoding.UTF8, "application/json");
             HttpClient httpClient = new HttpClient();
-            var response = await httpClient.PostAsync("https://localhost:44365/api/usuario/loginUsuario", jsonContent);
+            var response = await httpClient.PostAsync(LocalApi + "usuario/loginUsuario", jsonContent);
 
             if(response.IsSuccessStatusCode) {
                 ResLoginUsuario resLoginUsuario = new ResLoginUsuario();
@@ -45,8 +46,42 @@ public partial class LogCiclica : ContentPage
                 {
                     ObtenerDatosAEnviar.Session = resLoginUsuario.session;
                     // En LogCiclica después de la autenticación exitosa
-                    Application.Current.MainPage = new AppShell();
-                    // La api de Consejos devuelve un error 23 si no hay registro
+                    if (ObtenerDatosAEnviar.Session == null)
+                    {
+                        await DisplayAlert("Advertencia", "No hay una session", "Ok");
+                        return;
+                    }
+                    else
+                    {
+                        ReqMostrarConsejos reqMostrarConsejos = new ReqMostrarConsejos();
+                        reqMostrarConsejos.session = ObtenerDatosAEnviar.Session;
+
+                        var jsonContentt = new StringContent(JsonConvert.SerializeObject(reqMostrarConsejos), Encoding.UTF8, "application/json");
+                        HttpClient httpClientt = new HttpClient();
+                        var responses = await httpClientt.PostAsync(LocalApi + "Consejos/mostrarConsejos", jsonContentt);
+
+                        if(responses.IsSuccessStatusCode)
+                        {
+                            ResMostrarConsejos resMostrarConsejos = new ResMostrarConsejos();
+                            var responseContentt = await response.Content.ReadAsStringAsync();
+                            resMostrarConsejos = JsonConvert.DeserializeObject<ResMostrarConsejos>(responseContentt);
+                            if (resMostrarConsejos.errorCode == 0 && resMostrarConsejos.resultado == true)
+                            {
+                                ObtenerDatosAEnviar.consejos = resMostrarConsejos.MostrarLosConsejos;
+                                Application.Current.MainPage = new AppShell();
+                            }
+                            else if (resMostrarConsejos.errorCode == 23)
+                            {
+                                await DisplayAlert("FUNCIONAAAAAAA", "Pero el estado de notifi es 0", "Ok");
+                                Application.Current.MainPage = new AppShell();
+                            }
+                        }
+                        else
+                        {
+                            Application.Current.MainPage = new AppShell();
+                            await DisplayAlert("LA API NO DIO RESPUESTA CORRECTA", "", "Ok");
+                        }
+                    }  
                 }
                 else
                 {

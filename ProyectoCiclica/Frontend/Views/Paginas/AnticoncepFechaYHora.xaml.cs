@@ -69,7 +69,11 @@ public partial class AnticoncepFechaYHora : ContentPage
                         await DisplayAlert("FUNCIONAAAAAAA", "", "Ok");
                         await Navigation.PushAsync(new PagObtenerElMetodoAnticoncepEnUso());
                     }
-
+                    else if (resInsertarNotificaciones.errorCode == 21)
+                    {
+                        await DisplayAlert("FUNCIONAAAAAAA", "Pero no existe el metodo", "Ok");
+                        await Navigation.PushAsync(new MetodosAnticonceptivos());
+                    }
                 }
                 else
                 {
