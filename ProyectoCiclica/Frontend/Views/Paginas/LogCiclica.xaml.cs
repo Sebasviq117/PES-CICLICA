@@ -10,7 +10,7 @@ namespace Frontend.Views;
 public partial class LogCiclica : ContentPage
 {
     string api = "https://webapiciclica.azurewebsites.net/api/";
-
+    string LocalApi = "https://localhost:44365/api/";
     public LogCiclica()
 	{
         InitializeComponent();
@@ -35,7 +35,7 @@ public partial class LogCiclica : ContentPage
             reqLoginUsuario.userLog.contrasena = LoginContraseña.Text;
             var jsonContent = new StringContent(JsonConvert.SerializeObject(reqLoginUsuario), Encoding.UTF8, "application/json");
             HttpClient httpClient = new HttpClient();
-            var response = await httpClient.PostAsync(api + "usuario/loginUsuario", jsonContent);
+            var response = await httpClient.PostAsync("https://localhost:44365/api/usuario/loginUsuario", jsonContent);
 
             if(response.IsSuccessStatusCode) {
                 ResLoginUsuario resLoginUsuario = new ResLoginUsuario();
@@ -46,7 +46,7 @@ public partial class LogCiclica : ContentPage
                     ObtenerDatosAEnviar.Session = resLoginUsuario.session;
                     // En LogCiclica después de la autenticación exitosa
                     Application.Current.MainPage = new AppShell();
-
+                    // La api de Consejos devuelve un error 23 si no hay registro
                 }
                 else
                 {

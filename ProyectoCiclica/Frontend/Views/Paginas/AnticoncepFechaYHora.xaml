@@ -72,7 +72,7 @@
                     BorderColor="#b01d2e"
                     Margin="95,10,95,25"
                     Padding="10">
-                    <DatePicker
+                    <DatePicker x:Name="DatePicker_Fecha"
                         TextColor="#b01d2e"
                         Format="dd/MM/yyyy"
                         FontAttributes="Bold" FontSize="16"
@@ -110,11 +110,10 @@
                                    BackgroundColor="Transparent"
                                    Margin="0,0,1,0">
                             <TimePicker 
-                                    Time="20:00"
-                                    x:Name="TimePicker_Hora"
-                                    TextColor="#b01d2e"
-                                    Format="hh : mm"
-                                    FontSize="60"
+                                x:Name="TimePicker_Hora"
+                                TextColor="#b01d2e"
+                                Format="hh : mm"
+                                FontSize="60"
                                 HeightRequest="100"
                                 WidthRequest="220"/>
                         </Frame>

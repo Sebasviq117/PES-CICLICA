@@ -10,7 +10,7 @@ namespace Frontend
             InitializeComponent();
 
             //MainPage = new NavigationPage(new LogCiclica());
-            MainPage = new AppShell();
+            MainPage = new AnticoncepFechaYHora();
         }
     }
 }

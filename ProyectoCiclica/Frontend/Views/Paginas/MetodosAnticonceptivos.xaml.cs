@@ -1,5 +1,7 @@
 using Frontend.CapturarDatos;
 using Frontend.Entidades;
+using Newtonsoft.Json;
+using System.Text;
 using Frontend.Models;
 using SimpleToolkit.Core;
 using SimpleToolkit.SimpleShell;
@@ -8,15 +10,8 @@ namespace Frontend.Views.Paginas;
 
 public partial class MetodosAnticonceptivos : ContentPage
 {
-    public List<Anticonceptivos> ListaAnticonceptivos { get; set; } = new List<Anticonceptivos>
-    {
-        new Anticonceptivos { Anti_Concep_ID = 1, Anti_Concep_Nombre = "Pastillas anticonceptivas", Anti_Concep_Imagen = "pastillas_anticonceptivas.png" },
-        new Anticonceptivos { Anti_Concep_ID = 2, Anti_Concep_Nombre = "Inyeccion", Anti_Concep_Imagen = "inyeccion.png" },
-        new Anticonceptivos { Anti_Concep_ID = 3, Anti_Concep_Nombre = "DIU", Anti_Concep_Imagen = "diu.png" },
-        new Anticonceptivos { Anti_Concep_ID = 4, Anti_Concep_Nombre = "Parche", Anti_Concep_Imagen = "parche.png" },
-        new Anticonceptivos { Anti_Concep_ID = 5, Anti_Concep_Nombre = "Implante", Anti_Concep_Imagen = "implante.png" },
-        new Anticonceptivos { Anti_Concep_ID = 6, Anti_Concep_Nombre = "Anillo", Anti_Concep_Imagen = "anillo.png" },
-    };
+    string api = "https://webapiciclica.azurewebsites.net/api/";
+    string LocalApi = "https://localhost:44365/api/";
     public MetodosAnticonceptivos()
 	{
 		InitializeComponent();
@@ -28,15 +23,18 @@ public partial class MetodosAnticonceptivos : ContentPage
 
     private void BTN_PastillasAnticonceptivas_Clicked(object sender, EventArgs e)
     {
-        var clickedButton = (ImageButton)sender;
+        // Asigno una variable igual al ID del anticonceptivo
         int anticonceptivoId = 1;
-        var anticonceptivo = ListaAnticonceptivos.FirstOrDefault(a => a.Anti_Concep_ID == anticonceptivoId);
 
-        // Almacena el ID y la ruta de la imagen en las variables globales
-        ObtenerDatosAEnviar.IdAnticoncep = anticonceptivo.Anti_Concep_ID;
-        ObtenerDatosAEnviar.ImagenAnticoncep = anticonceptivo.Anti_Concep_Imagen;
+        // Almacena el ID en las variables globales
+        ObtenerDatosAEnviar.IdAnticoncep = anticonceptivoId;
 
-        // Continua con el registro
+        // Almacena el ID de la imagen en en las variables globales
+        ImageButton BTN_PastillasAnticonceptivas = (ImageButton)sender;
+        string idDePastillasAnticonceptivas = BTN_PastillasAnticonceptivas.AutomationId;
+        ObtenerDatosAEnviar.ImagenAnticoncep = idDePastillasAnticonceptivas;
+
+        // Continua con la navegacion de paginas
         Navigation.PushAsync(new AnticoncepFechaYHora());
     }
 
@@ -100,9 +98,51 @@ public partial class MetodosAnticonceptivos : ContentPage
         Navigation.PushAsync(new AnticoncepFechaYHora());
     }
 
-    private void BTN_HistorialAnticonceptivo_Clicked(object sender, EventArgs e)
+    private async void BTN_HistorialAnticonceptivo_Clicked(object sender, EventArgs e)
     {
-        // Pasa a la pagina de Mostrar el Historial
-        Navigation.PushAsync(new PagHistorialAnticoncep());
+        try
+        {
+            if (ObtenerDatosAEnviar.Session == null)
+            {
+                await DisplayAlert("Advertencia", "No hay una session", "Ok");
+                return;
+            }
+            else
+            {
+                ReqHistorialAnticonceptivos reqHistorialAnticonceptivos = new ReqHistorialAnticonceptivos();
+                reqHistorialAnticonceptivos.session = ObtenerDatosAEnviar.Session;
+
+                var jsonContent = new StringContent(JsonConvert.SerializeObject(reqHistorialAnticonceptivos), Encoding.UTF8, "application/json");
+                HttpClient httpClient = new HttpClient();
+                var response = await httpClient.PostAsync(LocalApi + "Notifi_Anticonceptivos/historialAnticonceptivos", jsonContent);
+                if (response.IsSuccessStatusCode)
+                {
+                    ResHistorialAnticonceptivos resHistorialAnticonceptivos = new ResHistorialAnticonceptivos();
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    resHistorialAnticonceptivos = JsonConvert.DeserializeObject<ResHistorialAnticonceptivos>(responseContent);
+                    if (resHistorialAnticonceptivos.errorCode == 0)
+                    {
+                        ObtenerDatosAEnviar.historialAnticoncep = resHistorialAnticonceptivos.HistorialAnticonceptivo;
+                        await DisplayAlert("FUNCIONAAAAAAA", "", "Ok");
+                        await Navigation.PushAsync(new PagHistorialAnticoncep());
+                    }
+                    else if (resHistorialAnticonceptivos.errorCode == 23)
+                    {
+                        await DisplayAlert("FUNCIONAAAAAAA", "Pero no hay registro", "Ok");
+                        await Navigation.PushAsync(new MetodosAnticonceptivos());
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("LA API NO DIO RESPUESTA CORRECTA", "", "Ok");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            await DisplayAlert("Error", "Error interno", "OK");
+        }
+        
     }
 }

@@ -90,10 +90,10 @@
                                 <Frame BorderColor="#b01d2e"
                                    BackgroundColor="Transparent"
                                    Margin="20,0,0,0">
-                                    <DatePicker
+                                    <DatePicker x:Name="FechaInicio"
                                         BindingContext="{Binding FechaInicio}"
                                         TextColor="#b01d2e"
-                                        Format="dd, mm, yyyy"
+                                        Format="dd / MM / yyyy"
                                         FontSize="16"
                                         WidthRequest="120"
                                         HeightRequest="60"/>
@@ -117,10 +117,10 @@
                                 <Frame BorderColor="#b01d2e"
                                        BackgroundColor="Transparent"
                                        Margin="20,0,0,0">
-                                    <DatePicker 
+                                    <DatePicker x:Name="FechaFinal"
                                         BindingContext="{Binding FechaFinal}"
                                         TextColor="#b01d2e"
-                                        Format="dd, mm, yyyy"
+                                        Format="dd / MM / yyyy"
                                         FontSize="16"
                                         WidthRequest="120"
                                         HeightRequest="60"/>
