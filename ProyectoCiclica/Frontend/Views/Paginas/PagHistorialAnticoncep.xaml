@@ -51,7 +51,8 @@
                     Margin="10"
                     WidthRequest="350"
                     HeightRequest="620"
-                    ItemsSource="{Binding listaHistorials}">
+                        x:Name="DatosDelHistorial"
+                    ItemsSource="{Binding historialAnticoncep}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Border StrokeShape="RoundRectangle 25"
@@ -67,7 +68,7 @@
                                 <Frame WidthRequest="60"
                                        HeightRequest="60"
                                        CornerRadius="25">
-                                    <Image Source="{Binding Imagen}"
+                                    <Image Source="{Binding RutaImagen}"
                                         WidthRequest="60"
                                         HeightRequest="60"/>
                                 </Frame>
@@ -75,7 +76,7 @@
                             <VerticalStackLayout Grid.Column="1"
                                     Margin="-50,35,0,0">
                                 <Label
-                                    Text="{Binding Nombre}"
+                                    Text="{Binding Anti_Concep_Nombre}"
                                     TextColor="#b01d2e"
                                     FontSize="18"
                                     FontAttributes="Bold"
@@ -90,13 +91,14 @@
                                 <Frame BorderColor="#b01d2e"
                                    BackgroundColor="Transparent"
                                    Margin="20,0,0,0">
-                                    <DatePicker x:Name="FechaInicio"
-                                        BindingContext="{Binding FechaInicio}"
+                                    <Label x:Name="FechaInicio"
+                                        Text="{Binding Notifi_Start_Date, StringFormat='{0:d}'}"
                                         TextColor="#b01d2e"
-                                        Format="dd / MM / yyyy"
-                                        FontSize="16"
+                                        FontSize="18"
                                         WidthRequest="120"
-                                        HeightRequest="60"/>
+                                        HeightRequest="60"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center"/>
                                 </Frame>
                             </Grid>
                             <Grid Grid.Row="1" Grid.Column="1"
@@ -107,7 +109,7 @@
                                     TextColor="#b01d2e"
                                     HorizontalTextAlignment="Center"
                                     VerticalTextAlignment="Center"
-                                    FontSize="16"
+                                    FontSize="18"
                                     FontAttributes="Bold"/>
                             </Grid>
                             <Grid Grid.Row="2"              
@@ -117,13 +119,14 @@
                                 <Frame BorderColor="#b01d2e"
                                        BackgroundColor="Transparent"
                                        Margin="20,0,0,0">
-                                    <DatePicker x:Name="FechaFinal"
-                                        BindingContext="{Binding FechaFinal}"
+                                    <Label x:Name="FechaFinal"
+                                        Text="{Binding Notifi_Fecha_Final, StringFormat='{0:d}'}"
                                         TextColor="#b01d2e"
-                                        Format="dd / MM / yyyy"
-                                        FontSize="16"
+                                        FontSize="18"
                                         WidthRequest="120"
-                                        HeightRequest="60"/>
+                                        HeightRequest="60"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center"/>
                                 </Frame>
                             </Grid>
                             <Grid Grid.Row="2" Grid.Column="1"
@@ -135,7 +138,7 @@
                                     TextColor="#b01d2e"
                                     HorizontalTextAlignment="Center"
                                     VerticalTextAlignment="Center"
-                                    FontSize="16"
+                                    FontSize="18"
                                     FontAttributes="Bold"/>
                             </Grid>
                         </Grid>

@@ -80,7 +80,7 @@
                             CornerRadius="25"
                             x:Name="BTN_Inyeccion"
                             Clicked="BTN_Inyeccion_Clicked"
-                        AutomationId="2"
+                            AutomationId="2"
                             Source="inyeccion.png"
                             HorizontalOptions="Center" VerticalOptions="Center">
                         <ImageButton.Shadow>
