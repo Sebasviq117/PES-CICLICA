@@ -36,7 +36,7 @@ public partial class LogCiclica : ContentPage
             reqLoginUsuario.userLog.contrasena = LoginContraseña.Text;
             var jsonContent = new StringContent(JsonConvert.SerializeObject(reqLoginUsuario), Encoding.UTF8, "application/json");
             HttpClient httpClient = new HttpClient();
-            var response = await httpClient.PostAsync(LocalApi + "usuario/loginUsuario", jsonContent);
+            var response = await httpClient.PostAsync(api + "usuario/loginUsuario", jsonContent);
 
             if(response.IsSuccessStatusCode) {
                 ResLoginUsuario resLoginUsuario = new ResLoginUsuario();
@@ -58,7 +58,7 @@ public partial class LogCiclica : ContentPage
 
                         var jsonContentt = new StringContent(JsonConvert.SerializeObject(reqMostrarConsejos), Encoding.UTF8, "application/json");
                         HttpClient httpClientt = new HttpClient();
-                        var responses = await httpClientt.PostAsync(LocalApi + "Consejos/mostrarConsejos", jsonContentt);
+                        var responses = await httpClientt.PostAsync(api + "Consejos/mostrarConsejos", jsonContentt);
 
                         if(responses.IsSuccessStatusCode)
                         {
@@ -72,14 +72,13 @@ public partial class LogCiclica : ContentPage
                             }
                             else if (resMostrarConsejos.errorCode == 23)
                             {
-                                await DisplayAlert("FUNCIONAAAAAAA", "Pero el estado de notifi es 0", "Ok");
                                 Application.Current.MainPage = new AppShell();
                             }
                         }
                         else
                         {
                             Application.Current.MainPage = new AppShell();
-                            await DisplayAlert("LA API NO DIO RESPUESTA CORRECTA", "", "Ok");
+                            await DisplayAlert("NO HUBO RESPUESTA", "", "Ok");
                         }
                     }  
                 }

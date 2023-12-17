@@ -138,7 +138,7 @@ public partial class VistaPrincipal : ContentPage
                 HttpClient httpClient = new HttpClient();
 
                 // Llamar al método de la API y esperar la respuesta
-                var response = await httpClient.PostAsync(LocalApi + "Anticonceptivos/obtenerAnticonceptivos", jsonContent);
+                var response = await httpClient.PostAsync(api + "Anticonceptivos/obtenerAnticonceptivos", jsonContent);
                 // Verificar el resultado de la API
                 if (response.IsSuccessStatusCode)
                 {
@@ -148,26 +148,23 @@ public partial class VistaPrincipal : ContentPage
                     if (resObtenerAnticonceptivos.errorCode == 0 && resObtenerAnticonceptivos.resultado == true)
                     {
                         ObtenerDatosAEnviar.anticonceptivos = resObtenerAnticonceptivos.ListaDeAnticoncepDatos;
-                        await DisplayAlert("FUNCIONAAAAAAA", "", "Ok");
                         await Navigation.PushAsync(new PagObtenerElMetodoAnticoncepEnUso());
                     }
                     else if (resObtenerAnticonceptivos.errorCode == 22)
                     {
                         ObtenerDatosAEnviar.anticonceptivos = resObtenerAnticonceptivos.ListaDeAnticoncepDatos;
-                        await DisplayAlert("FUNCIONAAAAAAA", "Pero el errorCode es que el estado de notifi es 0", "Ok");
                         await Navigation.PushAsync(new MetodosAnticonceptivos());
                     }
                     else if (resObtenerAnticonceptivos.errorCode == 23)
                     {
                         ObtenerDatosAEnviar.anticonceptivos = resObtenerAnticonceptivos.ListaDeAnticoncepDatos;
-                        await DisplayAlert("FUNCIONAAAAAAA", "Pero no hay registro", "Ok");
                         await Navigation.PushAsync(new MetodosAnticonceptivos());
                     }
                 }
                 else
                 {
                     // La llamada a la API no fue exitosa, puedes manejar el error según tus necesidades
-                    await DisplayAlert("LA API NO DIO RESPUESTA CORRECTA", "", "Ok");
+                    await DisplayAlert("NO HUBO RESPUESTA", "", "Ok");
                 }
             }
             
@@ -178,7 +175,7 @@ public partial class VistaPrincipal : ContentPage
             Console.WriteLine($"Error: {ex.Message}");
             await DisplayAlert("Error", "Error interno", "OK");
         }
-
+        //Navigation.PushAsync(new MetodosAnticonceptivos());
     }
 
     private void BTN_HistorialCicloMenstual_Clicked(object sender, EventArgs e)

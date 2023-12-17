@@ -125,7 +125,10 @@
                     x:Name="BTN_SuspenderMetodo"
                     Clicked="BTN_SuspenderMetodo_Clicked"
                     Text="Suspender"
-                    WidthRequest="100"
+                    BackgroundColor="#E58C8C"
+                    TextColor="#b01d2e"
+                    FontSize="16"
+                    WidthRequest="120"
                     HeightRequest="45"
                     VerticalOptions="End"
                     Margin="20"/>

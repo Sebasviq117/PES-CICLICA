@@ -45,7 +45,7 @@ public partial class PagObtenerElMetodoAnticoncepEnUso : ContentPage
 
                 var jsonContent = new StringContent(JsonConvert.SerializeObject(reqActualizarNotificaciones), Encoding.UTF8, "application/json");
                 HttpClient httpClient = new HttpClient();
-                var response = await httpClient.PostAsync(LocalApi + "Notificaciones/actualizarNotificaciones", jsonContent);
+                var response = await httpClient.PostAsync(api + "Notificaciones/actualizarNotificaciones", jsonContent);
                 if (response.IsSuccessStatusCode)
                 {
                     ResActualizarNotificaciones resActualziarNotificaciones = new ResActualizarNotificaciones();
@@ -53,18 +53,17 @@ public partial class PagObtenerElMetodoAnticoncepEnUso : ContentPage
                     resActualziarNotificaciones = JsonConvert.DeserializeObject<ResActualizarNotificaciones>(responseContent);
                     if (resActualziarNotificaciones.errorCode == 0 && resActualziarNotificaciones.resultado == true)
                     {
-                        await DisplayAlert("FUNCIONAAAAAAA", "", "Ok");
+                        await DisplayAlert("EXITO", "El metodo fue suspendido", "Ok");
                         await Navigation.PushAsync(new MetodosAnticonceptivos());
                     }
                     else if (resActualziarNotificaciones.errorCode == 22)
                     {
-                        await DisplayAlert("FUNCIONAAAAAAA", "Pero el estado de notifi es 0", "Ok");
                         await Navigation.PushAsync(new MetodosAnticonceptivos());
                     }
                 }
                 else
                 {
-                    await DisplayAlert("LA API NO DIO RESPUESTA CORRECTA", "", "Ok");
+                    await DisplayAlert("NO HUBO RESPUESTA", "", "Ok");
                 }
             }
         }
@@ -73,5 +72,7 @@ public partial class PagObtenerElMetodoAnticoncepEnUso : ContentPage
             Console.WriteLine($"Error: {ex.Message}");
             await DisplayAlert("Error", "Error interno", "OK");
         }
+        
+        //Navigation.PushAsync(new MetodosAnticonceptivos());
     }
 }

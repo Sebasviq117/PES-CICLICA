@@ -56,7 +56,7 @@ public partial class AnticoncepFechaYHora : ContentPage
                 HttpClient httpClient = new HttpClient();
 
                 // Llamar al método de la API y esperar la respuesta
-                var response = await httpClient.PostAsync(LocalApi + "Notificaciones/InsertarNotificaciones", jsonContent);
+                var response = await httpClient.PostAsync(api + "Notificaciones/InsertarNotificaciones", jsonContent);
 
                 // Verificar el resultado de la API
                 if (response.IsSuccessStatusCode)
@@ -66,19 +66,23 @@ public partial class AnticoncepFechaYHora : ContentPage
                     resInsertarNotificaciones = JsonConvert.DeserializeObject<ResInsertarNotificaciones>(responseContent);
                     if (resInsertarNotificaciones.errorCode == 0 && resInsertarNotificaciones.resultado == true)
                     {
-                        await DisplayAlert("FUNCIONAAAAAAA", "", "Ok");
+                        await DisplayAlert("EXITO", "Ya tienes agregado el metodo anticonceptivo", "Ok");
                         await Navigation.PushAsync(new PagObtenerElMetodoAnticoncepEnUso());
                     }
                     else if (resInsertarNotificaciones.errorCode == 21)
                     {
-                        await DisplayAlert("FUNCIONAAAAAAA", "Pero no existe el metodo", "Ok");
+                        await DisplayAlert("NO EXISTE EL ANTICONCEPTIVO SELECCIONADO", "", "Ok");
                         await Navigation.PushAsync(new MetodosAnticonceptivos());
+                    }
+                    else
+                    {
+                        await DisplayAlert("YA TIENES UN REGISTRO", "", "Ok");
                     }
                 }
                 else
                 {
                     // La llamada a la API no fue exitosa
-                    await DisplayAlert("LA API NO DIO RESPUESTA CORRECTA", "", "Ok");
+                    await DisplayAlert("NO HUBO RESPUESTA", "", "Ok");
                 }
             }
 
@@ -89,5 +93,6 @@ public partial class AnticoncepFechaYHora : ContentPage
             Console.WriteLine($"Error: {ex.Message}");
             await DisplayAlert("Error", "Error interno", "OK");
         }
+        //Navigation.PushAsync(new PagObtenerElMetodoAnticoncepEnUso());
     }
 }

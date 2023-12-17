@@ -3,49 +3,23 @@ namespace Frontend.Views.Paginas;
 using Frontend.Models;
 using SimpleToolkit.Core;
 using SimpleToolkit.SimpleShell;
+using Frontend.Entidades;
+using Frontend.CapturarDatos;
+
 public partial class PagHistorialAnticoncep : ContentPage
 {
-	public List<ListaHistorial> listaHistorials { get; set; }
 	public PagHistorialAnticoncep()
 	{
+        var listaHistorials = ObtenerDatosAEnviar.historialAnticoncep;
 		InitializeComponent();
-		this.listaHistorials = new List<ListaHistorial>()
+		listaHistorials = new List<Notifi_Anticonceptivos>()
 		{
-			new ListaHistorial()
+			new Notifi_Anticonceptivos()
 			{
-				Nombre = "Pastillas Anticonceptivas",
-                Imagen = "pastillas_anticonceptivas.png",
-				FechaInicio = null,
-				FechaFinal = null
+				Anti_Concep_Nombre = "",
+				Notifi_Start_Date = DateTime.Now,
+				Notifi_Fecha_Final = DateTime.Today,
             },
-            new ListaHistorial()
-            {
-                Nombre = "Inyeccion",
-                Imagen = "inyeccion.png",
-                FechaInicio = null,
-                FechaFinal = null
-            },
-            new ListaHistorial()
-            {
-                Nombre = "DIU",
-                Imagen = "diu.png",
-                FechaInicio = null,
-                FechaFinal = null
-            },
-            new ListaHistorial()
-            {
-                Nombre = "Parche",
-                Imagen = "parche.png",
-                FechaInicio = null,
-                FechaFinal = null
-            },
-            new ListaHistorial()
-            {
-                Nombre = "Implante",
-                Imagen = "implante.png",
-                FechaInicio = null,
-                FechaFinal = null
-            }
         };
 
         this.BindingContext = this;
