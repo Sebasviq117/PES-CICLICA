@@ -53,6 +53,7 @@
                         HeightRequest="120" WidthRequest="120"
                         CornerRadius="25"
                         x:Name="BTN_PastillasAnticonceptivas"
+                        AutomationId="1"
                         Clicked="BTN_PastillasAnticonceptivas_Clicked"
                         Source="pastillas_anticonceptivas.png"
                         HorizontalOptions="Center" VerticalOptions="Center">
@@ -79,6 +80,7 @@
                             CornerRadius="25"
                             x:Name="BTN_Inyeccion"
                             Clicked="BTN_Inyeccion_Clicked"
+                            AutomationId="2"
                             Source="inyeccion.png"
                             HorizontalOptions="Center" VerticalOptions="Center">
                         <ImageButton.Shadow>
@@ -104,6 +106,7 @@
                         CornerRadius="25"
                         x:Name="BTN_Diu"
                         Clicked="BTN_Diu_Clicked"
+                        AutomationId="3"
                         Source="diu.png"
                         HorizontalOptions="Center" VerticalOptions="Center">
                         <ImageButton.Shadow>
@@ -129,6 +132,7 @@
                         CornerRadius="25"
                         x:Name="BTN_Parche"
                         Clicked="BTN_Parche_Clicked"
+                        AutomationId="4"
                         Source="parche.png"
                         HorizontalOptions="Center" VerticalOptions="Center">
                         <ImageButton.Shadow>
@@ -154,6 +158,7 @@
                         CornerRadius="25"
                         x:Name="BTN_Implante"
                         Clicked="BTN_Implante_Clicked"
+                        AutomationId="5"
                         Source="implante.png"
                         HorizontalOptions="Center" VerticalOptions="Center">
                         <ImageButton.Shadow>
@@ -179,6 +184,7 @@
                         CornerRadius="25"
                         x:Name="BTN_Anillo"
                         Clicked="BTN_Anillo_Clicked"
+                        AutomationId="6"
                         Source="anillo.png"
                         HorizontalOptions="Center" VerticalOptions="Center">
                         <ImageButton.Shadow>

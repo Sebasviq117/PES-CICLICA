@@ -3,14 +3,22 @@ using System.Globalization;
 using System.Windows.Input;
 using Frontend.Models;
 using Frontend.Views.Paginas;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Frontend.Entidades;
 using SimpleToolkit.Core;
 using SimpleToolkit.SimpleShell;
+using Frontend.CapturarDatos;
+using Newtonsoft.Json;
+using System.Text;
+using System.Collections.Generic;
+using System.Net.Http.Json;
 
 namespace Frontend.Views;
 
 public partial class VistaPrincipal : ContentPage
 {
+    string api = "https://webapiciclica.azurewebsites.net/api/";
+    string LocalApi = "https://localhost:44365/api/";
+
     #region BindableProperty
     public static readonly BindableProperty SelectedDateProperty = BindableProperty.Create(
         nameof(SelectedDate),
@@ -53,9 +61,16 @@ public partial class VistaPrincipal : ContentPage
     public ObservableCollection<CalendarModel> Dates { get; set; } = new ObservableCollection<CalendarModel>();
     public VistaPrincipal()
     {
+        CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("es-ES");
         InitializeComponent();
         BindDates(DateTime.Now);
         NavigationPage.SetHasNavigationBar(this, false);
+
+        // Obtener la lista de Consejos desde la variable global
+        var consejosMostrar = ObtenerDatosAEnviar.consejos;
+
+        // Asignar la lista al origen de datos del CollectionView
+        PestañaConsejos.ItemsSource = consejosMostrar;
     }
     private void BindDates(DateTime date)
     {
@@ -101,25 +116,77 @@ public partial class VistaPrincipal : ContentPage
 
     private void BTN_RegistroDiario_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new RegCiclica());
+       
     }
 
     private void BTN_RegistroCiclo_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new RegCiclica());
+       
     }
-
-    private void BTN_SaludSexual_Clicked(object sender, EventArgs e)
+    private async void BTN_SaludSexual_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new MetodosAnticonceptivos());
+        try
+        {
+            if (ObtenerDatosAEnviar.Session == null)
+            {
+                await DisplayAlert("Advertencia", "No hay una session", "Ok");
+                await Navigation.PushAsync(new LogCiclica());
+            }
+            else
+            {
+                // Crear la solicitud para la API
+                ReqObtenerAnticonceptivos reqObtenerAnticonceptivo = new ReqObtenerAnticonceptivos();
+                reqObtenerAnticonceptivo.session = ObtenerDatosAEnviar.Session;
+
+                // Crear una instancia del cliente de la API
+                var jsonContent = new StringContent(JsonConvert.SerializeObject(reqObtenerAnticonceptivo), Encoding.UTF8, "application/json");
+                HttpClient httpClient = new HttpClient();
+
+                // Llamar al método de la API y esperar la respuesta
+                var response = await httpClient.PostAsync(api + "Anticonceptivos/obtenerAnticonceptivos", jsonContent);
+                // Verificar el resultado de la API
+                if (response.IsSuccessStatusCode)
+                {
+                    ResObtenerAnticonceptivos resObtenerAnticonceptivos = new ResObtenerAnticonceptivos();
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    resObtenerAnticonceptivos = JsonConvert.DeserializeObject<ResObtenerAnticonceptivos>(responseContent);
+                    if (resObtenerAnticonceptivos.errorCode == 0 && resObtenerAnticonceptivos.resultado == true)
+                    {
+                        ObtenerDatosAEnviar.anticonceptivos = resObtenerAnticonceptivos.ListaDeAnticoncepDatos;
+                        await Navigation.PushAsync(new PagObtenerElMetodoAnticoncepEnUso());
+                    }
+                    else if (resObtenerAnticonceptivos.errorCode == 22)
+                    {
+                        ObtenerDatosAEnviar.anticonceptivos = resObtenerAnticonceptivos.ListaDeAnticoncepDatos;
+                        await Navigation.PushAsync(new MetodosAnticonceptivos());
+                    }
+                    else if (resObtenerAnticonceptivos.errorCode == 23)
+                    {
+                        ObtenerDatosAEnviar.anticonceptivos = resObtenerAnticonceptivos.ListaDeAnticoncepDatos;
+                        await Navigation.PushAsync(new MetodosAnticonceptivos());
+                    }
+                }
+                else
+                {
+                    // La llamada a la API no fue exitosa, puedes manejar el error según tus necesidades
+                    await DisplayAlert("NO HUBO RESPUESTA", "", "Ok");
+                }
+            }
+            
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier excepción inesperada
+            Console.WriteLine($"Error: {ex.Message}");
+            await DisplayAlert("Error", "Error interno", "OK");
+        }
+        //Navigation.PushAsync(new MetodosAnticonceptivos());
     }
 
     private void BTN_HistorialCicloMenstual_Clicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new RegCiclica());
     }
-
-    private void BTN_OcultarConsejo_Clicked(object sender, EventArgs e)
+    private void BTN_CerrarPestaña_Clicked(object sender, EventArgs e)
     {
         PestañaConsejos.IsVisible = false;
     }

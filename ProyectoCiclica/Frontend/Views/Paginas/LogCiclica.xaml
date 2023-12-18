@@ -43,6 +43,10 @@
             Clicked="Btn_Ingresar_Clicked"   
             Text="Ingresar" 
             VerticalOptions="Center" 
+            WidthRequest="350"
+            TextColor="#F4D7DC"
+            FontAttributes="Bold"
+            FontSize="16"
             CornerRadius="20" 
             BackgroundColor="#b01d2e"/>
 

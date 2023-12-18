@@ -11,5 +11,6 @@ namespace Frontend.Entidades
         public string Anti_Concep_Nombre { get; set; }
         public DateTime Notifi_Start_Date { get; set; }
         public DateTime? Notifi_Fecha_Final { get; set; }
+        public String RutaImagen {  get; set; }
     }
 }

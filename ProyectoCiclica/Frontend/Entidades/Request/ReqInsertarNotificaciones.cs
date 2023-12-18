@@ -9,6 +9,5 @@ namespace Frontend.Entidades
     public class ReqInsertarNotificaciones : ReqBase
     {
         public Notificaciones notifiAnticoncep { get; set; }
-        // public Anticonceptivos Anticoncep { get; set; }
     }
 }
