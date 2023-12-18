@@ -4,7 +4,6 @@ using System.Windows.Input;
 using Frontend.Models;
 using Frontend.Views.Paginas;
 using Frontend.Entidades;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using SimpleToolkit.Core;
 using SimpleToolkit.SimpleShell;
 using Frontend.CapturarDatos;
@@ -71,7 +70,7 @@ public partial class VistaPrincipal : ContentPage
         var consejosMostrar = ObtenerDatosAEnviar.consejos;
 
         // Asignar la lista al origen de datos del CollectionView
-        PestañaConsej.ItemsSource = consejosMostrar;
+        PestañaConsejos.ItemsSource = consejosMostrar;
     }
     private void BindDates(DateTime date)
     {
@@ -187,8 +186,7 @@ public partial class VistaPrincipal : ContentPage
     private void BTN_HistorialCicloMenstual_Clicked(object sender, EventArgs e)
     {
     }
-
-    private void BTN_OcultarConsejo_Clicked(object sender, EventArgs e)
+    private void BTN_CerrarPestaña_Clicked(object sender, EventArgs e)
     {
         PestañaConsejos.IsVisible = false;
     }

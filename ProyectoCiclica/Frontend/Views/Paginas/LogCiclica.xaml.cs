@@ -63,15 +63,17 @@ public partial class LogCiclica : ContentPage
                         if(responses.IsSuccessStatusCode)
                         {
                             ResMostrarConsejos resMostrarConsejos = new ResMostrarConsejos();
-                            var responseContentt = await response.Content.ReadAsStringAsync();
+                            var responseContentt = await responses.Content.ReadAsStringAsync();
                             resMostrarConsejos = JsonConvert.DeserializeObject<ResMostrarConsejos>(responseContentt);
                             if (resMostrarConsejos.errorCode == 0 && resMostrarConsejos.resultado == true)
                             {
                                 ObtenerDatosAEnviar.consejos = resMostrarConsejos.MostrarLosConsejos;
+                                await DisplayAlert("Si hay consejos", "", "Ok");
                                 Application.Current.MainPage = new AppShell();
                             }
                             else if (resMostrarConsejos.errorCode == 23)
                             {
+                                await DisplayAlert("No hay consejos", "", "Ok");
                                 Application.Current.MainPage = new AppShell();
                             }
                         }
