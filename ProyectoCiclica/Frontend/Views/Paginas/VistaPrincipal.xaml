@@ -181,7 +181,7 @@
                         HorizontalTextAlignment="Center"
                         VerticalTextAlignment="Start"
                         TextColor="#b01d2e"
-                        FontFamily="verah"
+                        FontFamily="Verah"
                         FontSize="14"
                         Margin="0,5,0,0"/>
                 </Border>
@@ -195,7 +195,7 @@
                     CornerRadius="25"
                     Text="Aceptar"
                     TextColor="#f4d7dc"
-                    FontFamily="verah"
+                    FontFamily="Verah"
                     FontAttributes="Bold"
                     FontSize="24"/>
             </Grid>
@@ -232,7 +232,7 @@
                         x:Name="BTN_RegistroDiario"
                         Clicked="BTN_RegistroDiario_Clicked"
                         Text="Registro diario"
-                        FontFamily="Verahb"
+                        FontFamily="Verah"
                         FontSize="20"
                         TextColor="#b01d2e"/>
                 </Border>
@@ -257,7 +257,7 @@
                         x:Name="BTN_RegistroCiclo"
                         Clicked="BTN_RegistroCiclo_Clicked"
                         Text="Registra tu ciclo"
-                        FontFamily="Verahb"
+                        FontFamily="Verah"
                         FontSize="20"
                         TextColor="#b01d2e"/>
                 </Border>
@@ -283,7 +283,7 @@
                         x:Name="BTN_SaludSexual"
                         Clicked="BTN_SaludSexual_Clicked"
                         Text="Tu salud sexual"
-                        FontFamily="Verahb"
+                        FontFamily="Verah"
                         FontSize="20"
                         TextColor="#b01d2e"/>
                 </Border>

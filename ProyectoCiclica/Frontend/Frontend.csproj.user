@@ -32,6 +32,12 @@
     <MauiXaml Update="Views\Paginas\AnticoncepFechaYHora.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Paginas\CatalogoProductos.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Paginas\DescripcionProducto.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Paginas\LogCiclica.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

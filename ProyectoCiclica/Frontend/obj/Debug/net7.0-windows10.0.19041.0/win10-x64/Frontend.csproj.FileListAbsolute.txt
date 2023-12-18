@@ -260,3 +260,18 @@ C:\Users\sebas\OneDrive\Escritorio\PES CICLICA\ProyectoCiclica\Frontend\obj\Debu
 C:\Users\sebas\OneDrive\Escritorio\PES CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Frontend.dll
 C:\Users\sebas\OneDrive\Escritorio\PES CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\refint\Frontend.dll
 C:\Users\sebas\OneDrive\Escritorio\PES CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Frontend.pdb
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Frontend.csproj.AssemblyReference.cache
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Frontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Frontend.dll
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\refint\Frontend.dll
+C:\Users\Esteban\OneDrive\Documentos\GitHub\PES-CICLICA\ProyectoCiclica\Frontend\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Frontend.pdb

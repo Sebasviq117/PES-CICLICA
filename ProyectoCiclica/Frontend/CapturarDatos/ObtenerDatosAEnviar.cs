@@ -11,7 +11,10 @@ namespace Frontend.CapturarDatos
     {
         public static string Session { get; set; }
         public static int IdAnticoncep { get; set; }
+        public static int CategoriaProductoId { get; set; }
         public static string NombreAnticoncep { get; set; }
         public static string ImagenAnticoncep { get; set; }
+        public static List<Producto> ListaProductos { get; set; }
+
     }
 }

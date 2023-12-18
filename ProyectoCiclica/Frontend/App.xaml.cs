@@ -9,8 +9,8 @@ namespace Frontend
         {
             InitializeComponent();
 
-            //MainPage = new NavigationPage(new LogCiclica());
-            MainPage = new PagObtenerElMetodoAnticoncepEnUso();
+            MainPage = new NavigationPage(new LogCiclica());
+           //MainPage = new AppShell(); //PagObtenerElMetodoAnticoncepEnUso();
         }
     }
 }

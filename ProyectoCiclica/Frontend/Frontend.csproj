@@ -58,8 +58,15 @@
 	  <None Remove="Resources\Fonts\Verah___.ttf" />
 	  <None Remove="Resources\Fonts\windows_command_prompt.ttf" />
 	  <None Remove="Resources\Images\anillo.png" />
+	  <None Remove="Resources\Images\aprendizaje.PNG" />
 	  <None Remove="Resources\Images\calendario.png" />
+	  <None Remove="Resources\Images\calzonmestrual.PNG" />
+	  <None Remove="Resources\Images\calzon_mestrual.PNG" />
+	  <None Remove="Resources\Images\copamestrualciclica.PNG" />
+	  <None Remove="Resources\Images\copa_menstrual.PNG" />
 	  <None Remove="Resources\Images\diu.png" />
+	  <None Remove="Resources\Images\ebook_descubriendo_el_ciclo_menstrual.PNG" />
+	  <None Remove="Resources\Images\ebook_educacion_sexual_integral_esi_en_casa.PNG" />
 	  <None Remove="Resources\Images\implante.png" />
 	  <None Remove="Resources\Images\inyeccion.png" />
 	  <None Remove="Resources\Images\logored.png" />
@@ -67,10 +74,15 @@
 	  <None Remove="Resources\Images\logo_ciclica2.png" />
 	  <None Remove="Resources\Images\logo_vag_red.png" />
 	  <None Remove="Resources\Images\logo_vag_red2.png" />
+	  <None Remove="Resources\Images\menopausia.PNG" />
+	  <None Remove="Resources\Images\mestruacion.PNG" />
 	  <None Remove="Resources\Images\parche.png" />
 	  <None Remove="Resources\Images\pastillas_anticonceptivas.png" />
+	  <None Remove="Resources\Images\postparto.PNG" />
 	  <None Remove="Resources\Images\tienda.png" />
 	  <None Remove="Resources\Images\tiendanav.png" />
+	  <None Remove="Resources\Images\toallaflujoabundante.PNG" />
+	  <None Remove="Resources\Images\toalla_flujo_abundante.PNG" />
 	  <None Remove="Resources\Images\usuario.png" />
 	</ItemGroup>
 
@@ -96,6 +108,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Paginas\AnticoncepFechaYHora.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\CatalogoProductos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Paginas\DescripcionProducto.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Paginas\LogCiclica.xaml">

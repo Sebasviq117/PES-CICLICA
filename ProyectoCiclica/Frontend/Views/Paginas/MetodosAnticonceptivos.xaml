@@ -36,7 +36,7 @@
                Margin="80,110,0,0"
                TextColor="#b01d2e"
                FontSize="36"
-               FontFamily="Verahb"/>
+               FontFamily="Verah"/>
             <Grid RowDefinitions="auto, auto, auto, auto"
                   ColumnDefinitions="auto, auto"
                   Margin="30,230,0,-650">
@@ -45,7 +45,7 @@
                       Margin="20">
                     <Label Text="Pastillas anticonceptivas"
                            TextColor="#b01d2e"
-                           FontFamily="verah"
+                           FontFamily="Verah"
                            FontSize="15"
                            Margin="-23"
                            HorizontalOptions="Center" VerticalOptions="Start"/>
@@ -70,7 +70,7 @@
                       Margin="0">
                     <Label Text="Inyeccion"
                            TextColor="#b01d2e"
-                           FontFamily="verah"
+                           FontFamily="Verah"
                            FontSize="15"
                            Margin="-2"
                            HorizontalOptions="Center" VerticalOptions="Start"/>
@@ -95,7 +95,7 @@
                       Margin="0">
                     <Label Text="DIU"
                            TextColor="#b01d2e"
-                           FontFamily="verah"
+                           FontFamily="Verah"
                            FontSize="15"
                            Margin="10"
                            HorizontalOptions="Center" VerticalOptions="Start"/>
@@ -120,7 +120,7 @@
                       Margin="30">
                     <Label Text="Parche"
                            TextColor="#b01d2e"
-                           FontFamily="verah"
+                           FontFamily="Verah"
                            FontSize="15"
                            Margin="-23"
                            HorizontalOptions="Center" VerticalOptions="Start"/>
@@ -145,7 +145,7 @@
                       Margin="0">
                     <Label Text="Implante"
                            TextColor="#b01d2e"
-                           FontFamily="verah"
+                           FontFamily="Verah"
                            FontSize="15"
                            Margin="-2"
                            HorizontalOptions="Center" VerticalOptions="Start"/>
@@ -170,7 +170,7 @@
                       Margin="20">
                     <Label Text="Anillo"
                            TextColor="#b01d2e"
-                           FontFamily="verah"
+                           FontFamily="Verah"
                            FontSize="15"
                            Margin="-23"
                            HorizontalOptions="Center" VerticalOptions="Start"/>
@@ -197,7 +197,7 @@
                 FontSize="20"
                 TextColor="#b01d2e"
                 FontAttributes="Bold"
-                FontFamily="verah"
+                FontFamily="Verah"
                 CornerRadius="25"
                 Margin="500,750,500,-580"
                 x:Name="BTN_HistorialAnticonceptivo"

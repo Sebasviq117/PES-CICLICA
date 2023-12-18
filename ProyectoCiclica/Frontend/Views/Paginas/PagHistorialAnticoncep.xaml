@@ -44,7 +44,7 @@
                 FontSize="30"
                 HorizontalTextAlignment="Center"
                 FontAttributes="Bold"
-                FontFamily="verah"/>
+                FontFamily="Verah"/>
         </Grid>
         <!--Lista del Historial-->
         <CollectionView Grid.Row="2"
