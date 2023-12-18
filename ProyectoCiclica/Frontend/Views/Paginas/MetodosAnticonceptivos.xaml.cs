@@ -29,11 +29,6 @@ public partial class MetodosAnticonceptivos : ContentPage
         // Almacena el ID en las variables globales
         ObtenerDatosAEnviar.IdAnticoncep = anticonceptivoId;
 
-        // Almacena el ID de la imagen en en las variables globales
-        ImageButton BTN_PastillasAnticonceptivas = (ImageButton)sender;
-        string idDePastillasAnticonceptivas = BTN_PastillasAnticonceptivas.AutomationId;
-        ObtenerDatosAEnviar.ImagenAnticoncep = idDePastillasAnticonceptivas;
-
         // Continua con la navegacion de paginas
         Navigation.PushAsync(new AnticoncepFechaYHora());
     }
@@ -45,11 +40,6 @@ public partial class MetodosAnticonceptivos : ContentPage
 
         // Almacena el ID en las variables globales
         ObtenerDatosAEnviar.IdAnticoncep = anticonceptivoId;
-
-        // Almacena el ID de la imagen en en las variables globales
-        ImageButton BTN_PastillasAnticonceptivas = (ImageButton)sender;
-        string idDePastillasAnticonceptivas = BTN_PastillasAnticonceptivas.AutomationId;
-        ObtenerDatosAEnviar.ImagenAnticoncep = idDePastillasAnticonceptivas;
 
         // Continua con la navegacion de paginas
         Navigation.PushAsync(new AnticoncepFechaYHora());
@@ -63,11 +53,6 @@ public partial class MetodosAnticonceptivos : ContentPage
         // Almacena el ID en las variables globales
         ObtenerDatosAEnviar.IdAnticoncep = anticonceptivoId;
 
-        // Almacena el ID de la imagen en en las variables globales
-        ImageButton BTN_PastillasAnticonceptivas = (ImageButton)sender;
-        string idDePastillasAnticonceptivas = BTN_PastillasAnticonceptivas.AutomationId;
-        ObtenerDatosAEnviar.ImagenAnticoncep = idDePastillasAnticonceptivas;
-
         // Continua con la navegacion de paginas
         Navigation.PushAsync(new AnticoncepFechaYHora());
     }
@@ -80,10 +65,8 @@ public partial class MetodosAnticonceptivos : ContentPage
         // Almacena el ID en las variables globales
         ObtenerDatosAEnviar.IdAnticoncep = anticonceptivoId;
 
-        // Almacena el ID de la imagen en en las variables globales
-        ImageButton BTN_PastillasAnticonceptivas = (ImageButton)sender;
-        string idDePastillasAnticonceptivas = BTN_PastillasAnticonceptivas.AutomationId;
-        ObtenerDatosAEnviar.ImagenAnticoncep = idDePastillasAnticonceptivas;
+        // Continua con la navegacion de paginas
+        Navigation.PushAsync(new AnticoncepFechaYHora());
 
         // Continua con la navegacion de paginas
         Navigation.PushAsync(new AnticoncepFechaYHora());
@@ -97,11 +80,6 @@ public partial class MetodosAnticonceptivos : ContentPage
         // Almacena el ID en las variables globales
         ObtenerDatosAEnviar.IdAnticoncep = anticonceptivoId;
 
-        // Almacena el ID de la imagen en en las variables globales
-        ImageButton BTN_PastillasAnticonceptivas = (ImageButton)sender;
-        string idDePastillasAnticonceptivas = BTN_PastillasAnticonceptivas.AutomationId;
-        ObtenerDatosAEnviar.ImagenAnticoncep = idDePastillasAnticonceptivas;
-
         // Continua con la navegacion de paginas
         Navigation.PushAsync(new AnticoncepFechaYHora());
     }
@@ -113,11 +91,6 @@ public partial class MetodosAnticonceptivos : ContentPage
 
         // Almacena el ID en las variables globales
         ObtenerDatosAEnviar.IdAnticoncep = anticonceptivoId;
-
-        // Almacena el ID de la imagen en en las variables globales
-        ImageButton BTN_PastillasAnticonceptivas = (ImageButton)sender;
-        string idDePastillasAnticonceptivas = BTN_PastillasAnticonceptivas.AutomationId;
-        ObtenerDatosAEnviar.ImagenAnticoncep = idDePastillasAnticonceptivas;
 
         // Continua con la navegacion de paginas
         Navigation.PushAsync(new AnticoncepFechaYHora());

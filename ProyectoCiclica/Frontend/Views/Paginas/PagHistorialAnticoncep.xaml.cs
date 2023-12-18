@@ -25,7 +25,7 @@ public partial class PagHistorialAnticoncep : ContentPage
         // Asignar la lista al origen de datos del CollectionView
         DatosDelHistorial.ItemsSource = historialAnticoncep;
     }
-    // Función para obtener la ruta de la imagen según el nombre del anticonceptivo
+        // Función para obtener la ruta de la imagen según el nombre del anticonceptivo
     private string ObtenerRutaImagen(string nombreAnticonceptivo)
     {
         // Ajusta esto según la lógica de cómo se asignan las rutas de las imágenes

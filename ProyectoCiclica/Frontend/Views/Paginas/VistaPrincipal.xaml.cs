@@ -66,6 +66,12 @@ public partial class VistaPrincipal : ContentPage
         InitializeComponent();
         BindDates(DateTime.Now);
         NavigationPage.SetHasNavigationBar(this, false);
+
+        // Obtener la lista de Consejos desde la variable global
+        var consejosMostrar = ObtenerDatosAEnviar.consejos;
+
+        // Asignar la lista al origen de datos del CollectionView
+        PestañaConsej.ItemsSource = consejosMostrar;
     }
     private void BindDates(DateTime date)
     {

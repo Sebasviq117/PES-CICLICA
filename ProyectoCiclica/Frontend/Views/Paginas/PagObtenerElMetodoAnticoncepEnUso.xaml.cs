@@ -13,16 +13,26 @@ public partial class PagObtenerElMetodoAnticoncepEnUso : ContentPage
     string api = "https://webapiciclica.azurewebsites.net/api/";
     string LocalApi = "https://localhost:44365/api/";
 
-    private ListaHistorial viewModel;
 	public PagObtenerElMetodoAnticoncepEnUso()
 	{
 		InitializeComponent();
-        viewModel = new ListaHistorial();
-        BindingContext = viewModel;
 
-        // Asigna el ID del anticonceptivo
-        int idAnticonceptivo = ObtenerDatosAEnviar.IdAnticoncep;
-        viewModel.Imagen = viewModel.ObtenerRutaImagen(idAnticonceptivo);
+        // Obtener la lista de historialAnticoncep desde la variable global
+        var anticoncepUso = ObtenerDatosAEnviar.anticonceptivos;
+
+        foreach (var anticonceptivo in anticoncepUso)
+        {
+            // Ajusta la lógica de nombres de imagen según tus necesidades
+            anticonceptivo.Anti_Concep_Imagen = ObtenerRutaImagen(anticonceptivo.Anti_Concep_Nombre);
+        }
+
+        // Asignar la lista al origen de datos del CollectionView
+        MostrarAnticoncepUso.ItemsSource = anticoncepUso;
+    }
+    private string ObtenerRutaImagen(string nombreAnticonceptivo)
+    {
+        // Ajusta esto según la lógica de cómo se asignan las rutas de las imágenes
+        return $"Resourses/Images/{nombreAnticonceptivo.ToLower().Replace(" ", "_")}.png";
     }
     private void BTN_RegresarDelMetodoEnUso_Clicked(object sender, EventArgs e)
     {

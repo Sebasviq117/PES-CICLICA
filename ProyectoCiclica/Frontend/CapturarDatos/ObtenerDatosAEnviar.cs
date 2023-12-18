@@ -11,11 +11,10 @@ namespace Frontend.CapturarDatos
     {
         public static string Session { get; set; }
         public static int IdAnticoncep { get; set; }
-        public static string NombreAnticoncep { get; set; }
-        public static string ImagenAnticoncep { get; set; }
         public static List<Anticonceptivos> anticonceptivos { get; set; }
         public static List<Notifi_Anticonceptivos> historialAnticoncep { get; set; }
         public static List<Consejos> consejos { get; set; }
+        public static CollectionView pestañaConsejos { get; set; }
 
     }
 }

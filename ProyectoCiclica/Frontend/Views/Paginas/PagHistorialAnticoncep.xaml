@@ -51,7 +51,7 @@
                     Margin="10"
                     WidthRequest="350"
                     HeightRequest="620"
-                        x:Name="DatosDelHistorial"
+                    x:Name="DatosDelHistorial"
                     ItemsSource="{Binding historialAnticoncep}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

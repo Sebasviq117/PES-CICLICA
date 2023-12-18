@@ -42,7 +42,7 @@ public partial class LogCiclica : ContentPage
                 ResLoginUsuario resLoginUsuario = new ResLoginUsuario();
                 var responseContent = await response.Content.ReadAsStringAsync();
                 resLoginUsuario = JsonConvert.DeserializeObject<ResLoginUsuario>(responseContent);
-                if (resLoginUsuario.resultado)
+                if (resLoginUsuario.resultado == true)
                 {
                     ObtenerDatosAEnviar.Session = resLoginUsuario.session;
                     // En LogCiclica después de la autenticación exitosa
@@ -84,7 +84,7 @@ public partial class LogCiclica : ContentPage
                 }
                 else
                 {
-                    await DisplayAlert("Advertencia", "Correo y contraseña incorrectos", "Ok");
+                    await DisplayAlert("Advertencia", "Correo y contraseña incorrectos o session ya activa", "Ok");
                 }
             }
             else

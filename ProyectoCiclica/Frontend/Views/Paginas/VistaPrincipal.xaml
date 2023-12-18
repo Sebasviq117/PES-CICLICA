@@ -162,45 +162,54 @@
                 </Border>
             </VerticalStackLayout>
         </Grid>
-        <StackLayout x:Name="PestañaConsejos"
-            Margin="0,180,0,0"
+        <CollectionView x:Name="PestañaConsej"
+                     Margin="0,180,0,0"
                      WidthRequest="325"
                      HeightRequest="200"
-                     HorizontalOptions="End">
-            <Grid 
-                WidthRequest="325"
-                HeightRequest="200"
-                BackgroundColor="Transparent"
-                HorizontalOptions="End"
-                VerticalOptions="Center">
-                <Border
-                    StrokeShape="RoundRectangle 28,0,28,0"
-                    BackgroundColor="#FBC5CA">
-                    <Label
-                        Text="Aqui va el texto que viene del metodo mostar consejos"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Start"
-                        TextColor="#b01d2e"
-                        FontFamily="Verah"
-                        FontSize="14"
-                        Margin="0,5,0,0"/>
-                </Border>
-                <Button x:Name="BTN_OcultarConsejo"
-                    Clicked="BTN_OcultarConsejo_Clicked"
-                    WidthRequest="120"
-                    HeightRequest="55"
-                    Margin="0,0,0,10"
-                    HorizontalOptions="Center"
-                    VerticalOptions="End"
-                    CornerRadius="25"
-                    Text="Aceptar"
-                    TextColor="#f4d7dc"
-                    FontFamily="Verah"
-                    FontAttributes="Bold"
-                    BackgroundColor="#b01d2e"
-                    FontSize="24"/>
-            </Grid>
-        </StackLayout>
+                     HorizontalOptions="End"
+                     IsVisible="true"
+                     ItemsSource="{Binding consejosMostrar}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid 
+                        WidthRequest="325"
+                        HeightRequest="200"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        IsVisible="true">
+                        <Border
+                            StrokeShape="RoundRectangle 28,0,28,0"
+                            BackgroundColor="#FBC5CA"
+                            IsVisible="true">
+                            <Label
+                                Text="{Binding Consj_Consejo}"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Start"
+                                TextColor="#b01d2e"
+                                FontFamily="Verah"
+                                FontSize="14"
+                                Margin="0,5,0,0"/>
+                        </Border>
+                        <Button x:Name="BTN_OcultarConsejo"
+                            Clicked="BTN_OcultarConsejo_Clicked"
+                            IsVisible="true"
+                            WidthRequest="120"
+                            HeightRequest="55"
+                            Margin="0,0,0,10"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            CornerRadius="25"
+                            Text="Aceptar"
+                            TextColor="#f4d7dc"
+                            FontFamily="Verah"
+                            FontAttributes="Bold"
+                            BackgroundColor="#b01d2e"
+                            FontSize="24"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
         <Grid Grid.Row="1" Margin="0,70,0,0">
             <VerticalStackLayout>
                 <BoxView                    

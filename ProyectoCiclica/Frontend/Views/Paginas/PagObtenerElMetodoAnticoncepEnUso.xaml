@@ -35,17 +35,23 @@
                     </Button.Shadow>
                 </Button>
             </Grid>
-            <Grid Grid.Row="1"
+            <CollectionView Grid.Row="1"
                   BackgroundColor="Transparent"
                   WidthRequest="350"
                   HeightRequest="450"
-                  Margin="0,0,0,0">
-                <Grid RowDefinitions="auto,auto,auto,auto">
+                  Margin="0,0,0,0"
+                  IsEnabled="True"
+                  VerticalScrollBarVisibility="Never"
+                  x:Name="MostrarAnticoncepUso"
+                  ItemsSource="{Binding anticoncepUso}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowDefinitions="auto,auto,auto,auto">
                     <Grid Grid.Row="0"
                           BackgroundColor="Transparent"
                           WidthRequest="350"
                           HeightRequest="90">
-                        <Label Text="Aqui va el nombre del anticonceptivo"
+                        <Label Text="{Binding Anti_Concep_Nombre}"
                                TextColor="#b01d2e"
                                FontSize="26"
                                HorizontalTextAlignment="Center"
@@ -57,7 +63,7 @@
                           BackgroundColor="Transparent"
                           WidthRequest="350"
                           HeightRequest="90">
-                        <Label Text="Aqui va la efectividad"
+                        <Label Text="{Binding Anti_Concep_Efectividad}"
                                TextColor="#b01d2e"
                                FontSize="26"
                                HorizontalTextAlignment="Center"
@@ -81,7 +87,7 @@
                         <Frame WidthRequest="120"
                                HeightRequest="120"
                                CornerRadius="25">
-                            <Image Source="pastillas_anticonceptivas.png"
+                            <Image Source="{Binding Anti_Concep_Imagen}"
                                WidthRequest="120"
                                HeightRequest="120"/>
                         </Frame>
@@ -98,7 +104,10 @@
                                VerticalTextAlignment="Center"/>
                     </Grid>
                 </Grid>
-            </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
             <Grid Grid.Row="2"
                   WidthRequest="350"
                   HeightRequest="150"
